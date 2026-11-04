@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claudia Pubill · Psicóloga · Propuesta C, Amanecer</title>
+<meta name="description" content="Psicóloga para niños, adolescentes, familias, parejas y adultos. Terapia online y presencial.">
+<meta name="theme-color" content="#0E0C24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400..700&family=Bricolage+Grotesque:opsz,wght@12..96,200..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/booking.css">
+<link rel="stylesheet" href="shared/sections.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  /* ——— Colores y tipografías (editables) ——— */
+  :root{
+    --ink:#2A1F36; --ink-2:#4B3A57; --light:#F4EEF9;
+    --amber:#F6B26B; --amber-hi:#F9C68C; --ground:#EDA58E; --paper:#FFF1E6; --ember:#E2683F;
+    --display:'Bricolage Grotesque',ui-sans-serif,system-ui,sans-serif;
+    --body:'Albert Sans',ui-sans-serif,system-ui,sans-serif;
+    --gutter:clamp(1.25rem,5vw,4.5rem);
+    --focus:var(--ink);
+    /* ventana de reserva */
+    --bk-bg:#FFF6EE; --bk-ink:#2A1F36; --bk-muted:#5E4B6B; --bk-line:rgba(42,31,54,.16);
+    --bk-accent:#F6B26B; --bk-accent-ink:#2A1F36; --bk-radius:20px;
+    --bk-display:var(--display); --bk-display-weight:350; --bk-body:var(--body);
+    /* bloques compartidos (shared/sections.js) */
+    --sx-ink:var(--ink); --sx-muted:var(--ink-2); --sx-line:rgba(42,31,54,.18);
+    --sx-accent:var(--ember); --sx-accent-ink:var(--light);
+    --sx-alt:#FBE3D3; --sx-card:#FFF8F2; --sx-radius:20px; --sx-btn-radius:999px;
+    --sx-display:var(--display); --sx-display-weight:340; --sx-body:var(--body);
+    --sx-max:calc(76rem + 2 * var(--gutter)); --sx-gutter:var(--gutter);
+    --sx-ph-a:#F6C4A4; --sx-ph-b:#FFE9D8;
+    --sx-foot-bg:var(--ink); --sx-foot-ink:var(--light);
+    /* siluetas de colina para las imágenes y los bordes (mismo dibujo que el cielo) */
+    --hill:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath d='M0 150C160 110 300 96 460 128C620 160 760 200 920 170C1080 140 1200 92 1330 100C1390 104 1420 112 1440 118V320H0Z'/%3E%3C/svg%3E");
+    --hill-dawn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%23EDA58E' d='M0 150C160 110 300 96 460 128C620 160 760 200 920 170C1080 140 1200 92 1330 100C1390 104 1420 112 1440 118V320H0Z'/%3E%3C/svg%3E");
+    --hill-night:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%23120F31' d='M0 96C260 52 520 40 780 58C1040 76 1240 112 1440 104V320H0Z'/%3E%3C/svg%3E");
+    --ridge:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0 70C240 30 420 24 640 52C860 80 1080 86 1260 50C1340 36 1400 34 1440 38V100H0Z'/%3E%3C/svg%3E");
+    --ridge-far:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0 40C200 16 400 14 600 38C800 62 1000 70 1200 46C1310 33 1390 30 1440 32V100H0Z'/%3E%3C/svg%3E");
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+  svg{display:block}
+  a{color:inherit}
+  p{margin:0}
+  h1,h2,h3{margin:0;font-family:var(--display);font-weight:340;line-height:1.02;letter-spacing:-.02em;font-variation-settings:'opsz' 96;text-wrap:balance}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+  .skip{position:absolute;left:1rem;top:-5rem;z-index:60;padding:.7rem 1.1rem;border-radius:999px;background:var(--amber);color:var(--ink);font-weight:600;text-decoration:none}
+  .skip:focus{top:1rem}
+
+  /* ——— botones ——— */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:48px;padding:.75rem 1.35rem;border:1.5px solid transparent;border-radius:999px;font:600 1rem/1.1 var(--body);text-decoration:none;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .25s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn--amber{background:var(--amber);color:var(--ink)}
+  .btn--amber:hover{background:var(--amber-hi)}
+  .btn--ink{background:var(--ink);color:var(--light)}
+  .btn--ink:hover{background:#3C2D4C}
+  .btn--line{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn--line:hover{background:rgba(42,31,54,.07)}
+  .btn--ghost{background:transparent;color:inherit;border-color:rgba(244,238,249,.7)}
+  .btn--ghost::before{content:"";width:.72rem;height:.72rem;border-radius:50%;border:1.5px solid currentColor;transition:background-color .3s}
+  .btn--ghost:hover{background:rgba(244,238,249,.1)}
+  .btn--ghost[aria-pressed="true"]{background:var(--light);color:var(--ink);border-color:var(--light)}
+  .btn--ghost[aria-pressed="true"]::before{background:currentColor}
+  .btn--sm{min-height:40px;padding:.5rem 1.05rem;font-size:.93rem}
+  .btn--quiet{background:transparent;color:inherit;border-color:currentColor}
+  .btn--quiet:hover{background:color-mix(in srgb,currentColor 10%,transparent)}
+
+  /* ——— navegación fija ——— */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;gap:clamp(1rem,3vw,2.2rem);padding:.8rem var(--gutter);color:var(--ink);background-color:rgba(255,241,230,.72);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(42,31,54,.1);transition:color .6s ease,background-color .6s ease,box-shadow .6s ease}
+  .nav.is-night{color:var(--light);background-color:rgba(255,241,230,0);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 1px 0 rgba(244,238,249,0);--focus:var(--amber)}
+  /* sobre el pie oscuro la barra vuelve a ser de noche, pero opaca */
+  .nav.is-deep{color:var(--light);background-color:rgba(42,31,54,.86);box-shadow:0 1px 0 rgba(244,238,249,.14);--focus:var(--amber)}
+  .brand{margin-right:auto;font:400 1.35rem/1 var(--display);font-variation-settings:'opsz' 48;letter-spacing:-.015em;text-decoration:none;white-space:nowrap}
+  .nav ul{display:flex;gap:clamp(1rem,2.4vw,2rem);margin:0;padding:0;list-style:none;font-size:.97rem;font-weight:500}
+  .nav ul a{display:block;padding:.5rem 0;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 88%/0 1.5px no-repeat;transition:background-size .3s}
+  .nav ul a:hover{background-size:100% 1.5px}
+
+  /* ——— HERO: el cielo que amanece al bajar ——— */
+  .stage{position:relative;height:340vh}
+  .sky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate;
+    --orb:min(26vmin,240px); --moon-travel:30vh; --sun-travel:52vh;
+    --sky-top:#0E0C24; --sky-bot:#2A2150; --hill-far:#1C1742; --hill-near:#120F31; --sun:#E8603F;
+    --stars-o:1; --moon-t:0; --sun-t:0; --sun-o:0;
+    background:linear-gradient(180deg,var(--sky-top) 0%,var(--sky-bot) 100%)}
+  .stars{position:absolute;inset:0 0 32% 0;z-index:0;opacity:var(--stars-o)}
+  .stars i{position:absolute;border-radius:50%;background:#F4EEF9}
+  .stars i.tw{animation:twinkle 7s ease-in-out infinite}
+  @keyframes twinkle{50%{opacity:.12}}
+
+  .orbs{position:absolute;z-index:1;left:72%;top:42%;width:var(--orb);height:var(--orb);transform:translate(-50%,-50%)}
+  .orbs__pulse{position:absolute;inset:0;animation:pulse 10s ease-in-out infinite;will-change:transform}
+  @keyframes pulse{50%{transform:scale(1.06)}}
+  .is-breathing .orbs__pulse{animation-play-state:paused}
+  .sun-pos,.moon-pos,.moon-breath{position:absolute;inset:0}
+  .sun-pos{transform:translateY(calc((1 - var(--sun-t)) * var(--sun-travel)));opacity:var(--sun-o)}
+  .sun{position:absolute;inset:-9%;border-radius:50%;background:var(--sun);box-shadow:0 0 0 calc(var(--orb) * .09) color-mix(in srgb,var(--sun) 26%,transparent)}
+  .moon-pos{transform:translateY(calc(var(--moon-t) * var(--moon-travel)));opacity:var(--moon-o,1)}
+  .moon{position:absolute;inset:0;border-radius:50%;background:#EFEAFB;box-shadow:0 0 calc(var(--orb) * .4) calc(var(--orb) * .03) rgba(239,234,251,.2)}
+  .moon i{position:absolute;border-radius:50%;background:rgba(59,44,102,.075)}
+  .moon i:nth-child(1){width:23%;height:23%;left:21%;top:24%}
+  .moon i:nth-child(2){width:15%;height:15%;left:60%;top:50%}
+  .moon i:nth-child(3){width:9%;height:9%;left:38%;top:68%}
+  .moon__label{position:absolute;inset:0;display:grid;place-items:center;color:#3B2C66;font:400 calc(var(--orb) * .14)/1 var(--display);letter-spacing:-.01em;opacity:0;transition:opacity .6s}
+  .is-breathing .moon__label{opacity:1}
+
+  .hills{position:absolute;left:0;bottom:-1px;width:100%;height:38vh;height:38svh}
+  .hills--far{z-index:2}
+  .hills--far path{fill:var(--hill-far)}
+  .hills--near{z-index:3}
+  .hills--near path{fill:var(--hill-near)}
+  .hills .narrow{display:none}
+
+  /* capítulos del cielo (JS controla su opacidad) */
+  .ch{position:absolute;z-index:4;left:var(--gutter);top:50%;width:min(44rem,54vw);opacity:0;pointer-events:none;transform:translateY(calc(-50% + var(--dy,0px)));will-change:opacity,transform}
+  .ch--light{color:var(--light);--focus:var(--amber)}
+  .ch--dark{color:var(--ink)}
+  .ch1{opacity:1;pointer-events:auto}
+  .ch h1,.ch h2{font-size:clamp(2.3rem,min(5.6vw,9.6svh),5.2rem);font-weight:300;line-height:1}
+  .ch p{margin-top:1.25rem;max-width:34rem;font-size:clamp(1.03rem,1.2vw,1.2rem);line-height:1.55}
+  .ch__actions{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:1.8rem}
+  .ch__link{display:inline-flex;align-items:center;min-height:48px;padding:0 .5rem;font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.28em}
+  .ch .ch__hint{display:flex;align-items:center;gap:.7rem;margin-top:2rem;font-size:.9rem;opacity:.85}
+  .ch__hint::before{content:"";width:1px;height:1.7rem;background:currentColor;transform-origin:top;animation:hint 3.4s ease-in-out infinite}
+  @keyframes hint{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+
+  /* ——— secciones ——— */
+  .sec{padding:clamp(4.5rem,9vw,7.5rem) var(--gutter);scroll-margin-top:3rem}
+  .wrap{max-width:76rem;margin:0 auto}
+  .sec h2{font-size:clamp(2.2rem,4.6vw,3.9rem)}
+  .ground{background:linear-gradient(180deg,var(--ground) 0,#F7CBB4 30%,var(--paper) 74%)}
+
+  /* Quién soy */
+  .about{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(2.5rem,7vw,7rem);align-items:start}
+  .about__lead{margin-top:1.6rem;font:300 clamp(1.6rem,2.9vw,2.6rem)/1.22 var(--display);font-variation-settings:'opsz' 72;letter-spacing:-.015em}
+  .about__body{display:grid;gap:1.1rem;max-width:36rem;margin-top:2.4rem;color:var(--ink-2)}
+  .portrait{position:relative;margin:clamp(0rem,4vw,4rem) 0 0;aspect-ratio:4/5;border:1.5px solid rgba(42,31,54,.35);border-radius:50% 50% 0 0 / 40% 40% 0 0;overflow:hidden;
+    background:radial-gradient(circle at 50% 100%,rgba(246,178,107,.85) 0 27%,transparent 27.4%),linear-gradient(180deg,#FFE7D6 0%,#F7C3A6 100%)}
+  .portrait span{position:absolute;left:0;right:0;top:44%;text-align:center;font:400 1.15rem/1.2 var(--display);font-variation-settings:'opsz' 32}
+  .portrait-cap{margin-top:.8rem;font-size:.92rem;color:var(--ink-2)}
+
+  /* Qué ofrezco */
+  .offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:clamp(2.5rem,6vw,6rem);align-items:start}
+  .offer__head{position:sticky;top:6.5rem}
+  .offer__head p{margin-top:1.2rem;max-width:22rem;color:var(--ink-2)}
+  .rows{list-style:none;margin:0;padding:0;border-bottom:1px solid rgba(42,31,54,.24)}
+  .row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.4rem 2rem;align-items:center;padding:1.7rem 0}
+  .row::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(var(--ink),var(--ink)) 0 0/0 100% no-repeat,rgba(42,31,54,.24);transition:background-size .6s ease}
+  .row:hover::before{background-size:100% 100%}
+  .row h3{font-size:clamp(1.55rem,2.5vw,2.2rem);font-weight:360;font-variation-settings:'opsz' 60}
+  .row p{margin-top:.35rem;color:var(--ink-2)}
+
+  /* Cómo trabajo: escalones que suben */
+  .how{background:var(--paper)}
+  .how__intro{margin-top:1.1rem;max-width:30rem;color:var(--ink-2)}
+  .steps{list-style:none;margin:clamp(3rem,6vw,5rem) 0 0;padding:0;display:grid;gap:2.6rem}
+  .step{position:relative;padding-top:1.3rem;border-top:1.5px solid var(--ink)}
+  .step::before{content:"";position:absolute;left:0;top:calc(-.8rem - 1.5px);width:1.6rem;height:.8rem;
+    background:radial-gradient(circle .8rem at 50% calc(100% + (1 - var(--r)) * .8rem),var(--ember) calc(.8rem - .6px),transparent .8rem)}
+  .step:nth-child(1){--i:0;--r:.25} .step:nth-child(2){--i:1;--r:.45} .step:nth-child(3){--i:2;--r:.65} .step:nth-child(4){--i:3;--r:.85} .step:nth-child(5){--i:4;--r:1}
+  .step h3{font-size:clamp(1.3rem,1.8vw,1.6rem);font-weight:400;font-variation-settings:'opsz' 40;letter-spacing:-.01em;line-height:1.15}
+  .step p{margin-top:.6rem;color:var(--ink-2);font-size:1rem}
+
+  /* Reserva: banda de amanecer */
+  .book{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:clamp(6rem,12vw,10rem) var(--gutter) clamp(9rem,16vw,14rem);background:linear-gradient(180deg,var(--paper) 0%,#FFE2CC 45%,#FBC59E 100%)}
+  .book__sun{position:absolute;z-index:-1;left:50%;bottom:0;width:clamp(560px,110vw,1040px);aspect-ratio:1;border-radius:50%;background:#FFC370;transform:translate(-50%,50%);
+    box-shadow:0 0 0 clamp(18px,3vw,36px) rgba(255,195,112,.34),0 0 0 clamp(36px,6vw,72px) rgba(255,195,112,.16)}
+  .book h2{max-width:13ch;margin:0 auto;font-size:clamp(2.4rem,6vw,5rem)}
+  .book p{max-width:31rem;margin:1.4rem auto 0;color:var(--ink-2);text-wrap:balance}
+  .book__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2.2rem}
+  .book__actions .btn{min-width:9.5rem}
+  .book .book__pick{margin-top:1.8rem;color:var(--ink);font-weight:600}
+  .book__pick + .book__actions{margin-top:1rem}
+
+  /* ——— bloques compartidos (dudas, con quién trabajo, dónde, preguntas, blog, podcast, contacto, pie) ——— */
+  .sx[data-sx-anchor],#dudas{scroll-margin-top:2.5rem}
+  .sx :focus-visible{outline-color:var(--focus)}
+  .sx__h{font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.04;letter-spacing:-.02em;font-variation-settings:'opsz' 96}
+  .sx__lead{color:var(--ink-2);font-size:clamp(1.03rem,1.2vw,1.15rem)}
+  .sx--alt{background:linear-gradient(180deg,rgba(251,227,211,0) 0,var(--sx-alt) 16%,var(--sx-alt) 84%,rgba(251,227,211,0) 100%)}
+  .sx__btn{min-height:48px;padding:.75rem 1.35rem;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font:600 1rem/1.1 var(--body);transition:background-color .25s,transform .25s}
+  .sx__btn:hover{filter:none;background:rgba(42,31,54,.07);transform:translateY(-1px)}
+  .sx__card{border-color:rgba(42,31,54,.11)}
+  .sx__card h3{font-weight:400;font-size:clamp(1.25rem,1.6vw,1.45rem);font-variation-settings:'opsz' 40;letter-spacing:-.01em}
+  .sx__ctext strong{font-weight:400;font-variation-settings:'opsz' 32}
+
+  /* dudas: sobre la tierra que sigue al cielo, subrayados en tinta */
+  .sx--doubts{--sx-accent:var(--ink)}
+  .sx--doubts .sx__in{padding-bottom:clamp(.5rem,2vw,1.5rem)}
+
+  /* con quién trabajo: la colaboración con Somos Estupendas, en primer plano y al color de la banda de amanecer */
+  .sx--proof .sx__card:first-child{background:linear-gradient(165deg,#FFE7D6 0%,#FBCFAF 100%);border-color:transparent}
+  @media (min-width:900px){.sx--proof .sx__cards{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(0,1fr)}}
+
+  /* preguntas: la misma composición que «Qué ofrezco» */
+  .sx__faq{max-width:none;border-top-color:rgba(42,31,54,.24)}
+  .sx__q{border-bottom-color:rgba(42,31,54,.24)}
+  .sx__q summary{padding:1.3rem 0;font:400 clamp(1.12rem,1.5vw,1.3rem)/1.4 var(--display);font-variation-settings:'opsz' 32;letter-spacing:-.005em}
+  .sx__q p{color:var(--ink-2)}
+  @media (min-width:900px){
+    .sx--faq .sx__in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:clamp(2.5rem,6vw,6rem);align-items:start}
+    .sx--faq .sx__head{position:sticky;top:6.5rem;margin:0}
+  }
+
+  /* huecos de foto: el cielo del principio en pequeño (colina + sol o luna). Las fotos reales irán aquí. */
+  .sx-ph{position:relative;isolation:isolate;overflow:hidden;align-items:flex-start;border-bottom:0;
+    --ph-top:#F6C4A4; --ph-bot:#FFE9D8; --ph-hill:#EDA58E; --ph-orb:#FFC370; --ph-x:62%; --ph-y:40%; --ph-d:22%;
+    --stars:radial-gradient(circle 1.4px at 12% 30%,#F4EEF9 96%,transparent),radial-gradient(circle 1px at 27% 44%,#F4EEF9 96%,transparent),radial-gradient(circle 1.2px at 41% 14%,#F4EEF9 96%,transparent),radial-gradient(circle 1px at 55% 30%,#F4EEF9 96%,transparent),radial-gradient(circle 1.6px at 90% 12%,#F4EEF9 96%,transparent),radial-gradient(circle 1px at 94% 48%,#F4EEF9 96%,transparent),radial-gradient(circle 1.1px at 18% 58%,#F4EEF9 96%,transparent),radial-gradient(circle 1px at 62% 52%,#F4EEF9 96%,transparent),radial-gradient(circle 1.2px at 34% 24%,#F4EEF9 96%,transparent);
+    background:linear-gradient(180deg,var(--ph-top),var(--ph-bot))}
+  .sx-ph::before{content:"";position:absolute;left:var(--ph-x);top:var(--ph-y);width:var(--ph-d);aspect-ratio:1;border-radius:50%;background:var(--ph-orb);transform:translate(-50%,-50%);box-shadow:0 0 0 .6rem color-mix(in srgb,var(--ph-orb) 24%,transparent)}
+  .sx-ph::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:46%;background:var(--ph-hill);-webkit-mask:var(--hill) 0 0/100% 100% no-repeat;mask:var(--hill) 0 0/100% 100% no-repeat}
+  .sx-ph figcaption{position:relative;z-index:1;padding:.2rem .7rem;border-radius:999px;background:rgba(255,246,238,.86);color:var(--ink);font-size:.8rem}
+  /* blog: noche, atardecer y amanecer, los tres momentos del cielo */
+  .sx-ph--1{--ph-top:#0E0C24;--ph-bot:#2A2150;--ph-hill:#120F31;--ph-orb:#EFEAFB;--ph-x:74%;--ph-y:34%;--ph-d:15%;background:var(--stars),linear-gradient(180deg,var(--ph-top),var(--ph-bot))}
+  .sx-ph--1::before{box-shadow:0 0 1.6rem .2rem rgba(239,234,251,.2)}
+  .sx-ph--2{--ph-top:#3B2C66;--ph-bot:#A8627F;--ph-hill:#2F2358;--ph-orb:#E8603F;--ph-x:34%;--ph-y:64%;--ph-d:20%}
+  /* dónde nos vemos: el mismo amanecer, por la ventana de la consulta y en la pantalla */
+  .sx--places .sx-ph{background:linear-gradient(180deg,#FBE3D3 0 88%,#F3C9B0 88%)}
+  .sx--places .sx-ph::before{left:64%;top:auto;bottom:12%;width:30%;height:70%;aspect-ratio:auto;transform:translateX(-50%);border:1.5px solid rgba(42,31,54,.32);border-bottom:0;border-radius:50% 50% 0 0/36% 36% 0 0;box-shadow:none;
+    background:var(--hill-dawn) 0 100%/100% 36% no-repeat,radial-gradient(circle at 50% 78%,#FFC370 0 24%,transparent 24.5%),linear-gradient(180deg,#F6C4A4,#FFE9D8);background-repeat:no-repeat;background-origin:border-box}
+  .sx--places .sx-ph::after{display:none}
+  .sx--places li:nth-child(2) .sx-ph{background:linear-gradient(180deg,#FBE3D3,#F7D6C1)}
+  .sx--places li:nth-child(2) .sx-ph::before{top:20%;bottom:auto;width:54%;height:54%;border-bottom:1.5px solid rgba(42,31,54,.32);border-radius:10px}
+  .sx--places li:nth-child(2) .sx-ph::after{display:block;left:64%;right:auto;top:74%;bottom:auto;width:66%;height:4%;transform:translateX(-50%);border-radius:0 0 .6rem .6rem;background:#DCAA92;-webkit-mask:none;mask:none}
+  /* podcast: la luna con ondas de sonido */
+  .sx--podcast{background:none}
+  .sx--podcast .sx-ph{border:0}
+  .sx--podcast .sx__meta{margin-top:.9rem}
+  .sx-ph--pod{--ph-top:#1C1742;--ph-bot:#4E3A7A;background:var(--hill-night) 0 100%/100% 24% no-repeat,var(--stars),linear-gradient(180deg,var(--ph-top),var(--ph-bot))}
+  .sx-ph--pod::before{left:0;top:0;width:100%;height:100%;aspect-ratio:auto;transform:none;border-radius:0;box-shadow:none;
+    background:repeating-radial-gradient(circle at 50% 42%,rgba(239,234,251,.2) 0 1.5px,transparent 1.5px 1.9rem);
+    -webkit-mask:radial-gradient(circle at 50% 42%,#000 22%,transparent 58%);mask:radial-gradient(circle at 50% 42%,#000 22%,transparent 58%)}
+  .sx-ph--pod::after{left:50%;right:auto;top:42%;bottom:auto;width:26%;height:auto;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:#EFEAFB;-webkit-mask:none;mask:none;box-shadow:0 0 2.2rem .3rem rgba(239,234,251,.22)}
+
+  /* contacto: una colina de amanecer delante del sol de la banda */
+  .sx--contact{position:relative;background:linear-gradient(180deg,var(--ground) 0,#F2B9A0 100%);--sx-accent:var(--ink);--sx-line:rgba(42,31,54,.22)}
+  .sx--contact::before{content:"";position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:clamp(40px,6vw,84px);background:var(--ground);-webkit-mask:var(--ridge-far) 0 0/100% 100% no-repeat;mask:var(--ridge-far) 0 0/100% 100% no-repeat}
+  .sx--contact .sx__in{padding-top:clamp(1.5rem,3vw,2.5rem);padding-bottom:calc(clamp(3rem,7vw,5.5rem) + clamp(28px,4vw,60px))}
+  .sx--contact .sx__ico{background:rgba(255,241,230,.5)}
+  .sx--contact[data-sx-anchor]{scroll-margin-top:5.5rem}
+
+  /* pie: la colina de noche que cierra la página */
+  .sx--footer{position:relative;border-top:0;--sx-ink:var(--light);--sx-muted:#CFC2DB;--sx-line:rgba(244,238,249,.24);--sx-accent:var(--amber);--focus:var(--amber)}
+  .sx--footer::before{content:"";position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:clamp(44px,6.5vw,92px);background:var(--ink);-webkit-mask:var(--ridge) 0 0/100% 100% no-repeat;mask:var(--ridge) 0 0/100% 100% no-repeat}
+  .sx--footer .sx__in{padding-bottom:7rem}
+  .sx__fname{font-weight:400;font-variation-settings:'opsz' 48}
+  .sx__fh{font:400 1.05rem/1.2 var(--display);font-variation-settings:'opsz' 32;color:#CFC2DB}
+  .sx__fcrisis{max-width:37rem}
+  @media (max-width:899px){
+    .sx__fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .sx__fbrand{grid-column:1/-1}
+  }
+
+  /* ——— tablet / móvil ——— */
+  @media (min-width:1000px){
+    .steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:1.6rem;align-items:start}
+    .step{margin-top:calc((4 - var(--i)) * 3.4rem)}
+  }
+  @media (min-width:800px) and (max-width:1099px){
+    .orbs{left:75%}
+    .ch{width:min(44rem,48vw)}
+  }
+  @media (max-width:899px){
+    .about{grid-template-columns:1fr}
+    .about .portraitwrap{max-width:22rem}
+    .offer{grid-template-columns:1fr}
+    .offer__head{position:static}
+  }
+  @media (max-width:799px){
+    .nav ul{display:none}
+    .sky{--orb:min(32vmin,150px);--sun-travel:66vh;--moon-travel:26vh}
+    .orbs{left:50%;top:21%}
+    .hills{height:60vh;height:60svh}
+    .hills .wide{display:none}
+    .hills .narrow{display:inline}
+    .ch{left:var(--gutter);right:var(--gutter);top:auto;bottom:calc(5.25rem + env(safe-area-inset-bottom));width:auto;transform:translateY(var(--dy,0px))}
+    /* bruma suave detrás del último capítulo: en móvil el texto oscuro cae sobre las colinas */
+    .ch--dark::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:-14%;bottom:-10%;left:calc(-1 * var(--gutter));right:calc(-1 * var(--gutter));
+      background:linear-gradient(180deg,rgba(255,236,222,0) 0%,rgba(255,236,222,.5) 28%,rgba(255,236,222,.5) 78%,rgba(255,236,222,0) 100%)}
+  }
+  @media (max-width:799px) and (max-height:700px){
+    .sky{--orb:26vmin}
+    .orbs{top:17%}
+    .ch .ch__hint{display:none}
+  }
+  @media (max-width:640px){
+    .row{grid-template-columns:1fr;align-items:start}
+    .row .btn{justify-self:start;margin-top:.7rem}
+    .btn{font-size:.97rem}
+  }
+  @media (max-height:560px){.ch .ch__hint{display:none}}
+
+  @media (prefers-reduced-motion:reduce){
+    .orbs__pulse,.stars i.tw,.ch__hint::before{animation:none}
+    .btn,.nav,.row::before,.sx__btn{transition:none}
+  }
+  /* sin JavaScript: solo el cielo nocturno con el primer mensaje */
+  html:not(.js) .stage{height:100vh;height:100svh}
+  html:not(.js) .ch2,html:not(.js) .ch3,html:not(.js) #breathe{display:none}
+  html:not(.js) .nav{position:absolute}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav is-night" id="nav">
+  <a class="brand" href="#top">Claudia Pubill</a>
+  <nav aria-label="Principal">
+    <ul>
+      <li><a href="#quien-soy">Quién soy</a></li>
+      <li><a href="#que-ofrezco">Qué ofrezco</a></li>
+      <li><a href="#como-trabajo">Cómo trabajo</a></li>
+      <li><a href="#sx-preguntas" data-sx-go="preguntas">Preguntas</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn--quiet btn--sm" href="#sx-contacto" data-sx-go="contacto">Escríbeme</a>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO: cielo de noche a amanecer. Los textos de cada capítulo se pueden editar aquí. -->
+  <section class="stage" id="top" aria-label="Presentación">
+    <div class="sky" id="sky">
+      <div class="stars" id="stars" aria-hidden="true"></div>
+
+      <div class="orbs" aria-hidden="true">
+        <div class="orbs__pulse">
+          <div class="sun-pos"><div class="sun"></div></div>
+          <div class="moon-pos">
+            <div class="moon-breath" id="moonBreath">
+              <div class="moon"><i></i><i></i><i></i><span class="moon__label" id="breathLabel"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- colinas: una forma para pantallas anchas (.wide) y otra para móvil (.narrow) -->
+      <svg class="hills hills--far" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path class="wide" d="M0 150C160 110 300 96 460 128C620 160 760 200 920 170C1080 140 1200 92 1330 100C1390 104 1420 112 1440 118V320H0Z"/>
+        <path class="narrow" d="M0 96C260 52 520 40 780 58C1040 76 1240 112 1440 104V320H0Z"/>
+      </svg>
+      <svg class="hills hills--near" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path class="wide" d="M0 236C200 206 380 200 560 226C760 254 940 262 1120 236C1260 216 1360 212 1440 218V320H0Z"/>
+        <path class="narrow" d="M0 190C320 160 640 150 960 172C1180 188 1320 186 1440 178V320H0Z"/>
+      </svg>
+
+      <!-- Capítulo 1: noche -->
+      <div class="ch ch1 ch--light">
+        <h1>Hay días en los que todo pesa.</h1>
+        <p>Soy Claudia Pubill, psicóloga. Te ayudo a entender lo que te pasa, sin prisas, online o presencial.</p>
+        <div class="ch__actions">
+          <a class="btn btn--amber" href="#quien-soy">Conóceme</a>
+          <button class="btn btn--ghost" type="button" id="breathe" aria-pressed="false">Respira conmigo</button>
+        </div>
+        <p class="ch__hint">Baja despacio</p>
+      </div>
+
+      <!-- Capítulo 2: atardecer -->
+      <div class="ch ch2 ch--light">
+        <h2>No hace falta tocar fondo para pedir ayuda.</h2>
+        <p>Atiendo a niños, adolescentes, familias, parejas y adultos.</p>
+      </div>
+
+      <!-- Capítulo 3: amanecer -->
+      <div class="ch ch3 ch--dark">
+        <h2>Empieza cuando quieras.</h2>
+        <p>Puedes empezar por ver las terapias o por preguntarme lo que quieras.</p>
+        <div class="ch__actions">
+          <a class="btn btn--ink" href="#que-ofrezco">Ver las terapias</a>
+          <a class="ch__link" href="#dudas">Tengo dudas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ground">
+    <!-- ¿DUDAS? (texto en shared/sections.js) -->
+    <div data-sx="doubts" id="dudas"></div>
+
+    <!-- QUIÉN SOY -->
+    <section class="sec" id="quien-soy" data-sx-anchor="quien" aria-labelledby="t-quien">
+      <div class="wrap about">
+        <div>
+          <h2 id="t-quien">Quién soy</h2>
+          <p class="about__lead">Soy curiosa y reflexiva, y sé escuchar. Me motiva el cambio, y respeto la historia de cada persona tal como viene, sin juzgarla.</p>
+          <div class="about__body">
+            <p>Soy cercana sin dejar de ser profesional, y respeto los límites que pone cada uno.</p>
+            <p>Atiendo a niños, adolescentes, familias, parejas y adultos desde una perspectiva psicológica integradora, que intenta adaptarse a las necesidades de quien tengo delante.</p>
+            <p>Trabajo en equipos multidisciplinares y llevo mis casos a supervisión, lo que me ayuda a entender mejor a cada persona y a mí misma.</p>
+          </div>
+        </div>
+        <div class="portraitwrap">
+          <!-- FOTO: sustituir este marco por <img src="…" alt="Claudia Pubill"> -->
+          <div class="portrait" role="img" aria-label="Foto de Claudia (pendiente)"><span>Aquí irá la foto de Claudia</span></div>
+          <p class="portrait-cap">Claudia Pubill, psicóloga</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUÉ OFREZCO: cada botón abre la explicación de esa terapia (data-info; textos en shared/services.js) -->
+    <section class="sec" id="que-ofrezco" data-sx-anchor="terapias" aria-labelledby="t-ofrezco">
+      <div class="wrap offer">
+        <div class="offer__head">
+          <h2 id="t-ofrezco">Qué ofrezco</h2>
+          <p>Terapia online o presencial. Si no tienes claro qué encaja contigo, lo vemos juntos en la primera sesión.</p>
+        </div>
+        <ul class="rows">
+          <li class="row">
+            <div><h3>Terapia individual</h3><p>Sesiones solo para ti, para entender qué te pasa y qué quieres cambiar.</p></div>
+            <button class="btn btn--line btn--sm" type="button" data-info="individual">En qué consiste<span class="sr"> la terapia individual</span></button>
+          </li>
+          <li class="row">
+            <div><h3>Terapia de pareja</h3><p>Aprender a escucharos otra vez, sin ganar ni perder.</p></div>
+            <button class="btn btn--line btn--sm" type="button" data-info="pareja">En qué consiste<span class="sr"> la terapia de pareja</span></button>
+          </li>
+          <li class="row">
+            <div><h3>Terapia familiar</h3><p>Cuando lo que pasa en casa os afecta a todos y conviene hablarlo juntos.</p></div>
+            <button class="btn btn--line btn--sm" type="button" data-info="familiar">En qué consiste<span class="sr"> la terapia familiar</span></button>
+          </li>
+          <li class="row">
+            <div><h3>Terapia infantojuvenil</h3><p>Para niños y adolescentes que lo están pasando mal, con la familia cerca.</p></div>
+            <button class="btn btn--line btn--sm" type="button" data-info="infantojuvenil">En qué consiste<span class="sr"> la terapia infantojuvenil</span></button>
+          </li>
+          <li class="row">
+            <div><h3>Neuroevaluación</h3><p>Entender cómo aprende una persona cuando algo le cuesta y no se sabe por qué.</p></div>
+            <button class="btn btn--line btn--sm" type="button" data-info="neuroevaluacion">En qué consiste<span class="sr"> la neuroevaluación</span></button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- CÓMO TRABAJO: puntos diferenciales -->
+  <section class="sec how" id="como-trabajo" data-sx-anchor="como" aria-labelledby="t-como">
+    <div class="wrap">
+      <h2 id="t-como">Cómo trabajo</h2>
+      <p class="how__intro">Lo que puedes esperar de mí.</p>
+      <ul class="steps">
+        <li class="step"><h3>Atención individualizada</h3><p>Cada persona llega con su historia. Lo que hacemos en terapia lo decidimos juntos y lo vamos ajustando.</p></li>
+        <li class="step"><h3>Terapia integradora</h3><p>Combino enfoques según lo que necesites en cada momento.</p></li>
+        <li class="step"><h3>Supervisión de casos</h3><p>Comento mis casos con un equipo terapéutico; otras miradas ven lo que a mí se me escapa.</p></li>
+        <li class="step"><h3>Formación constante</h3><p>Sigo formándome para no quedarme con lo que ya sé.</p></li>
+        <li class="step"><h3>Estudio y práctica</h3><p>Formación académica y práctica clínica en equipos multidisciplinares.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Bloques compartidos: todo su texto está en shared/sections.js -->
+  <div data-sx="proof"></div>
+  <div data-sx="places"></div>
+  <div data-sx="faq"></div>
+  <div data-sx="blog"></div>
+  <div data-sx="podcast"></div>
+
+  <!-- PRIMERA SESIÓN: banda de amanecer -->
+  <section class="book" id="reserva" aria-labelledby="t-reserva">
+    <div class="book__sun" aria-hidden="true"></div>
+    <h2 id="t-reserva">Pedir una primera sesión.</h2>
+    <p>La primera sesión es para conocernos y ver si encajamos. Después decides tú si seguimos.</p>
+    <p class="book__pick">Elige cómo prefieres hacerla:</p>
+    <div class="book__actions">
+      <button class="btn btn--ink" type="button" data-book data-book-mode="online">Online</button>
+      <button class="btn btn--line" type="button" data-book data-book-mode="presencial">Presencial</button>
+    </div>
+    <p class="book__pick"><a href="#sx-contacto" data-sx-go="contacto" style="color:inherit;text-decoration:underline;text-underline-offset:.2em">Prefiero escribir antes</a></p>
+  </section>
+
+  <!-- CONTACTO -->
+  <div data-sx="contact"></div>
+</main>
+
+<!-- PIE (shared/sections.js): nº de colegiada, ciudad, teléfono y páginas legales pendientes -->
+<div data-sx="footer"></div>
+
+<script>
+/* Amanecer: el cielo cambia de noche a amanecer según bajas por la página. */
+(() => {
+  const stage = document.querySelector('.stage');
+  const sky = document.getElementById('sky');
+  const nav = document.getElementById('nav');
+  const chapters = Array.from(sky.querySelectorAll('.ch'));
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* Colores del cielo (editables): noche al principio, atardecer a mitad, amanecer al final */
+  const SKY = {
+    night: { top: '#0E0C24', bot: '#2A2150', far: '#1C1742', near: '#120F31' },
+    dusk:  { top: '#3B2C66', bot: '#A8627F', far: '#4E3A7A', near: '#2F2358' },
+    dawn:  { top: '#F6C4A4', bot: '#FFE9D8', far: '#F0A98C', near: '#EDA58E' },
+  };
+  const SUN = ['#E8603F', '#FFC370'];
+  /* Tramo de cada capítulo: 0 = arriba del todo, 1 = final del cielo */
+  const CHAPTERS = [[0, 0.3], [0.35, 0.62], [0.66, 1]];
+  const FADE = 0.08;
+  const NAV_DARK_FROM = 0.62;
+
+  const toRGB = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+  const RGB = {};
+  Object.keys(SKY).forEach((k) => {
+    RGB[k] = {};
+    Object.keys(SKY[k]).forEach((c) => { RGB[k][c] = toRGB(SKY[k][c]); });
+  });
+  const SUN_RGB = SUN.map(toRGB);
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const ramp = (p, a, b) => clamp((p - a) / (b - a));
+  const mix = (a, b, t) => 'rgb(' + a.map((v, i) => Math.round(v + (b[i] - v) * t)).join(',') + ')';
+  const skyAt = (c, p) => (p <= 0.5
+    ? mix(RGB.night[c], RGB.dusk[c], p / 0.5)
+    : mix(RGB.dusk[c], RGB.dawn[c], (p - 0.5) / 0.5));
+
+  /* Estrellas: 60 puntos fijos (misma posición en cada visita) */
+  const starBox = document.getElementById('stars');
+  let seed = 11;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  for (let i = 0; i < 60; i++) {
+    const s = document.createElement('i');
+    const size = rnd() < 0.12 ? 2.6 : 0.8 + rnd() * 1.3;
+    s.style.cssText = `left:${(rnd() * 100).toFixed(2)}%;top:${(rnd() * 100).toFixed(2)}%;width:${size.toFixed(1)}px;height:${size.toFixed(1)}px;opacity:${(0.35 + rnd() * 0.6).toFixed(2)}`;
+    if (i % 6 === 0) { s.className = 'tw'; s.style.animationDelay = `${-(i % 5) * 1.4}s`; }
+    starBox.appendChild(s);
+  }
+
+  /* Respira conmigo: la luna crece 4 s (inspira) y vuelve en 6 s (espira) */
+  const breatheBtn = document.getElementById('breathe');
+  const moonBreath = document.getElementById('moonBreath');
+  const breathLabel = document.getElementById('breathLabel');
+  let breathing = false;
+  let breathTimer = 0;
+  function breathPhase(inhale) {
+    moonBreath.style.transition = `transform ${inhale ? 4 : 6}s ease-in-out`;
+    moonBreath.style.transform = inhale ? 'scale(1.18)' : 'scale(1)';
+    breathLabel.textContent = inhale ? 'Inspira' : 'Espira';
+    breathTimer = setTimeout(() => breathPhase(!inhale), inhale ? 4000 : 6000);
+  }
+  function startBreath() {
+    breathing = true;
+    breatheBtn.setAttribute('aria-pressed', 'true');
+    sky.classList.add('is-breathing');
+    breathPhase(true);
+  }
+  function stopBreath() {
+    breathing = false;
+    clearTimeout(breathTimer);
+    breatheBtn.setAttribute('aria-pressed', 'false');
+    sky.classList.remove('is-breathing');
+    moonBreath.style.transition = 'transform .8s ease';
+    moonBreath.style.transform = 'scale(1)';
+  }
+  breatheBtn.addEventListener('click', () => (breathing ? stopBreath() : startBreath()));
+
+  /* Pintar el cielo según el progreso p (0–1) */
+  let span = 1;
+  let last = -1;
+  let ticking = false;
+  const measure = () => { span = Math.max(1, stage.offsetHeight - window.innerHeight); };
+
+  function render() {
+    ticking = false;
+    const p = clamp(-stage.getBoundingClientRect().top / span);
+    if (p === last) return;
+    last = p;
+    const s = sky.style;
+    s.setProperty('--sky-top', skyAt('top', p));
+    s.setProperty('--sky-bot', skyAt('bot', p));
+    s.setProperty('--hill-far', skyAt('far', p));
+    s.setProperty('--hill-near', skyAt('near', p));
+    s.setProperty('--stars-o', (1 - ramp(p, 0.05, 0.5)).toFixed(3));
+    const m = ramp(p, 0.15, 0.6);
+    s.setProperty('--moon-t', m.toFixed(4));
+    s.setProperty('--moon-o', ((1 - m) * (1 - m)).toFixed(3)); /* se apaga antes de cruzarse con el sol */
+    const t = ramp(p, 0.3, 1);
+    s.setProperty('--sun-t', t.toFixed(4));
+    s.setProperty('--sun-o', ramp(p, 0.3, 0.4).toFixed(3));
+    s.setProperty('--sun', mix(SUN_RGB[0], SUN_RGB[1], t));
+
+    const still = reduce.matches;
+    chapters.forEach((el, i) => {
+      const [a, b] = CHAPTERS[i];
+      const fin = i === 0 ? 1 : ramp(p, a, a + FADE);
+      const fout = i === chapters.length - 1 ? 1 : 1 - ramp(p, b - FADE, b);
+      const v = Math.min(fin, fout);
+      el.style.opacity = v.toFixed(3);
+      el.style.setProperty('--dy', still ? '0px' : `${((1 - fin) * 28 - (1 - fout) * 28).toFixed(1)}px`);
+      el.style.pointerEvents = v > 0.6 ? 'auto' : 'none';
+    });
+
+    nav.classList.toggle('is-night', p < NAV_DARK_FROM);
+    if (breathing && p > CHAPTERS[0][1] - FADE) stopBreath();
+  }
+
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(render);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => { measure(); last = -1; onScroll(); });
+  if (reduce.addEventListener) reduce.addEventListener('change', () => { last = -1; onScroll(); });
+
+  /* Teclado: si el foco entra en un capítulo oculto, baja hasta él */
+  sky.addEventListener('focusin', (e) => {
+    const i = chapters.indexOf(e.target.closest('.ch'));
+    if (i < 0) return;
+    const [a, b] = CHAPTERS[i];
+    const lo = i === 0 ? 0 : a + FADE;
+    const hi = i === chapters.length - 1 ? 1 : b - FADE;
+    if (last >= lo && last <= hi) return;
+    window.scrollTo({ top: stage.offsetTop + ((lo + hi) / 2) * span, behavior: 'instant' });
+  });
+
+  measure();
+  render();
+})();
+
+/* Barra: cuando pasa por encima del pie oscuro, vuelve a ser de noche */
+(() => {
+  const nav = document.getElementById('nav');
+  let foot = null;
+  let ticking = false;
+  const check = () => {
+    ticking = false;
+    foot = foot || document.querySelector('.sx--footer');
+    if (foot) nav.classList.toggle('is-deep', foot.getBoundingClientRect().top < nav.offsetHeight);
+  };
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(check);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('load', check);
+})();
+</script>
+<!-- Reserva: cambiar el número de WhatsApp y el enlace de Cal.com cuando existan -->
+<script>window.CLAUDIA={whatsapp:'34600000000',calLink:''}</script>
+<script src="shared/services.js" defer></script>
+<script src="shared/sections.js" defer></script>
+<script src="shared/booking.js" defer></script>
+<script src="shared/switcher.js" defer></script>
+</body>
+</html>

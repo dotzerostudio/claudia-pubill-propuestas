@@ -1,0 +1,125 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/a-respira.html"
+        ],
+        "createdAt": "2026-11-02T16:07:59.668Z",
+        "reason": "false positive (Claude, verified in browser): detector cannot resolve var()/clamp() padding and sizes; spacing and heading sizes are ample"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/a-respira.html"
+        ],
+        "createdAt": "2026-11-02T16:07:59.692Z",
+        "reason": "false positive (Claude, verified in browser): detector cannot resolve var()/clamp() padding and sizes; spacing and heading sizes are ample"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/b-calidez.html"
+        ],
+        "createdAt": "2026-11-02T16:07:59.721Z",
+        "reason": "false positive (Claude, verified in browser): detector cannot resolve var()/clamp() padding and sizes; spacing and heading sizes are ample"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/b-calidez.html"
+        ],
+        "createdAt": "2026-11-02T16:07:59.749Z",
+        "reason": "false positive (Claude, verified in browser): detector cannot resolve var()/clamp() padding and sizes; spacing and heading sizes are ample"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/d-ventana.html"
+        ],
+        "createdAt": "2026-11-02T16:07:59.769Z",
+        "reason": "false positive (Claude, verified in browser): detector cannot resolve var()/clamp() padding and sizes; spacing and heading sizes are ample"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/d-ventana.html"
+        ],
+        "createdAt": "2026-11-02T16:07:59.792Z",
+        "reason": "false positive (Claude, verified in browser): detector cannot resolve var()/clamp() padding and sizes; spacing and heading sizes are ample"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/c-amanecer.html"
+        ],
+        "createdAt": "2026-11-02T16:07:59.816Z",
+        "reason": "false positive (Claude): .portrait is an arch-shaped photo placeholder with a centred label, not a text container"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/c-amanecer.html"
+        ],
+        "createdAt": "2026-11-02T16:07:59.837Z",
+        "reason": "design choice (Claude, not user-confirmed): the dawn-peach page ground continues the sunrise sky of the hero stage; it is the concept, not a default"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/e-trama.html"
+        ],
+        "createdAt": "2026-11-03T07:17:10.835Z",
+        "reason": "false positive (Claude, verified in browser): detector cannot resolve clamp() section padding; spacing is ample"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/e-trama.html"
+        ],
+        "createdAt": "2026-11-03T07:17:10.862Z",
+        "reason": "false positive (Claude, verified in browser): heading sizes use clamp(), which the detector reads as 16px; real ratio is above 2x"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "/Users/pablomenjibar/Documents/Claude/Projects/Web Claudia Pubill/directions/e-trama.html"
+        ],
+        "createdAt": "2026-11-03T07:17:10.881Z",
+        "reason": "sanctioned exception (Claude): the 8px stripe is the woven selvedge of the Trama concept, a full-width band edge, not a card accent"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "directions/f-alba.html"
+        ],
+        "createdAt": "2026-11-04T13:15:41.019Z",
+        "reason": "Falso positivo: los bloques (hero, sec, tile, band) llevan padding con clamp()/var() que el detector no resuelve; igual que en b-calidez.html"
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "directions/f-alba.html"
+        ],
+        "createdAt": "2026-11-04T15:01:52.750Z",
+        "reason": "Intentional: .about clips only the decorative rotated .rooms::before blob so mobile pages do not widen; no tooltips or menus inside"
+      }
+    ]
+  }
+}

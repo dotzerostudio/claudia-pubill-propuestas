@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claudia Pubill · Psicóloga · Propuesta E, Sobremesa</title>
+<meta name="description" content="Claudia Pubill, psicóloga en Barcelona y online. Terapia individual, de pareja, familiar e infantojuvenil y neuroevaluaciones. Primera sesión por WhatsApp o eligiendo día y hora.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1F5A43">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..700&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/booking.css">
+<link rel="stylesheet" href="shared/sections.css">
+<style>
+  /* Propuesta E · Sobremesa
+     Blanco como fondo, y tres colores sacados de las fotos: verde del sofá, albaricoque de la camisa, lila de los cojines.
+     Young Serif para los títulos y Figtree para el texto. Cuerpo a 18 px. */
+  :root {
+    --ink: #1B2A24;
+    --ink-2: #3D4F46;
+    --line: #D7E0DA;
+    --paper: #FFFFFF;
+    --sage: #E6F0E8;
+    --green: #1F5A43;
+    --green-deep: #173F31;
+    --on-green: #EAF2EC;
+    --apricot: #F5A662;
+    --lilac: #E4DAF5;
+    --display: 'Young Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    --body: 'Figtree', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --r: 26px;
+    --gutter: clamp(1.1rem, 4vw, 3rem);
+
+    --sx-ink: var(--ink); --sx-muted: var(--ink-2); --sx-line: var(--line);
+    --sx-accent: var(--green); --sx-accent-ink: #fff; --sx-alt: var(--sage); --sx-card: #fff;
+    --sx-radius: 22px; --sx-btn-radius: 999px; --sx-display: var(--display); --sx-display-weight: 400;
+    --sx-body: var(--body); --sx-max: 1160px; --sx-gutter: var(--gutter);
+    --sx-foot-bg: var(--green-deep); --sx-foot-ink: #fff;
+
+    --bk-bg: #fff; --bk-ink: var(--ink); --bk-muted: var(--ink-2); --bk-line: var(--line);
+    --bk-accent: var(--green); --bk-accent-ink: #fff; --bk-radius: 24px;
+    --bk-display: var(--display); --bk-display-weight: 400; --bk-body: var(--body);
+  }
+  html { font-size: 112.5%; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; font: 400 1rem/1.65 var(--body); color: var(--ink); background: var(--paper); }
+  img { display: block; max-width: 100%; height: auto; }
+  h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; letter-spacing: -0.008em; line-height: 1.18; text-wrap: balance; }
+  p { margin: 0; text-wrap: pretty; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+  [data-sx-anchor], .sx[id] { scroll-margin-top: 5rem; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 var(--gutter); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    min-height: 3rem; padding: 0.7rem 1.5rem; border-radius: 999px;
+    border: 2px solid var(--green); background: var(--green); color: #fff;
+    font: 600 1rem/1.2 var(--body); text-decoration: none; cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn:hover { background: var(--green-deep); border-color: var(--green-deep); }
+  .btn--ghost { background: transparent; color: var(--green); }
+  .btn--ghost:hover { background: var(--sage); border-color: var(--green); }
+  .btn--light { background: #fff; border-color: #fff; color: var(--green); }
+  .btn--light:hover { background: var(--green); border-color: var(--green); color: #fff; }
+  .link {
+    display: inline-flex; align-items: center; gap: 0.45rem; min-height: 3rem;
+    font-weight: 600; color: var(--green); text-decoration: underline;
+    text-decoration-thickness: 2px; text-underline-offset: 0.25em;
+    text-decoration-color: color-mix(in srgb, var(--green) 35%, transparent);
+  }
+  .link:hover { text-decoration-color: currentColor; }
+  .link svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* etiqueta de foto provisional */
+  .tag {
+    position: absolute; left: 0.8rem; bottom: 0.8rem; z-index: 1;
+    padding: 0.2rem 0.7rem; border-radius: 999px; background: rgba(255, 255, 255, 0.92);
+    color: var(--ink); font: 500 0.8rem/1.5 var(--body);
+  }
+
+  /* cabecera */
+  .top { position: sticky; top: 0; z-index: 30; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .top__in { display: flex; align-items: center; gap: 0.75rem; min-height: 4.25rem; }
+  .brand { display: flex; align-items: baseline; gap: 0.55rem; margin-right: auto; text-decoration: none; white-space: nowrap; }
+  .brand__name { font: 400 1.35rem/1 var(--display); letter-spacing: -0.01em; }
+  .brand__role { font-size: 0.95rem; color: var(--ink-2); }
+  .nav { display: flex; align-items: center; gap: 0.15rem; margin-right: 0.5rem; }
+  .nav a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 0.8rem; border-radius: 999px; text-decoration: none; font-weight: 500; white-space: nowrap; }
+  .nav a:hover { background: var(--sage); }
+  .nav .nav__contact { display: none; }
+  .menu-btn { display: none; align-items: center; justify-content: center; min-width: 3rem; min-height: 3rem; padding: 0 0.9rem; border: 2px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink); font: 600 1rem var(--body); cursor: pointer; }
+  .menu-btn[aria-expanded="true"] { background: var(--sage); border-color: var(--sage); }
+  @media (max-width: 880px) {
+    .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 0.15rem; margin: 0; padding: 0.6rem var(--gutter) 1rem; background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 24px 40px -30px rgba(23, 63, 49, 0.4); }
+    .top.is-open .nav { display: flex; }
+    .nav a { min-height: 3rem; font-size: 1.05rem; }
+    .menu-btn { display: inline-flex; }
+    .brand__role { display: none; }
+    .top .btn { padding-inline: 1.1rem; }
+  }
+  @media (max-width: 440px) { .top .btn--top { display: none; } .nav .nav__contact { display: inline-flex; color: var(--green); } }
+
+  /* portada */
+  .hero { padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3rem, 7vw, 5.5rem); }
+  .hero__in { display: grid; gap: 2.75rem; align-items: center; }
+  @media (min-width: 900px) { .hero__in { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); } }
+  .hero h1 { font-size: clamp(1.9rem, 3.6vw, 2.85rem); line-height: 1.14; letter-spacing: -0.01em; }
+  .hero__lead { margin-top: 1.3rem; font-size: 1.15rem; font-weight: 500; max-width: 30rem; }
+  .hero__p { margin-top: 0.8rem; font-size: 1.05rem; max-width: 30rem; color: var(--ink-2); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.5rem; margin-top: 1.8rem; }
+  .hero__meta { margin-top: 1.5rem; color: var(--ink-2); }
+
+  .collage { position: relative; width: 100%; max-width: 620px; aspect-ratio: 1 / 0.98; margin-inline: auto; }
+  .collage__block { position: absolute; top: 10%; right: 0; bottom: 4%; left: 30%; border-radius: var(--r); background: var(--apricot); }
+  .collage__main { position: absolute; top: 0; right: 7%; width: 70%; aspect-ratio: 4 / 5; border-radius: var(--r); overflow: hidden; background: var(--sage); }
+  .collage__main img, .collage__second img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .collage__main img { object-position: 50% 45%; }
+  .collage__main .tag { bottom: auto; top: 0.8rem; }
+  .collage__second { position: absolute; left: 0; bottom: 0; width: 48%; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; background: var(--sage); box-shadow: 0 0 0 6px #fff; }
+  .collage__second img { object-position: 60% 40%; }
+  .collage__chip { position: absolute; right: -0.4rem; top: 16%; z-index: 2; padding: 0.5rem 1rem; border-radius: 999px; background: var(--lilac); color: var(--ink); font-weight: 600; box-shadow: 0 0 0 5px #fff; }
+  @media (max-width: 899px) { .collage { max-width: 520px; } .collage__chip { font-size: 0.95rem; padding: 0.4rem 0.85rem; } }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__text > * { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+    .hero__text > :nth-child(2) { animation-delay: 0.05s; }
+    .hero__text > :nth-child(3) { animation-delay: 0.1s; }
+    .hero__text > :nth-child(4) { animation-delay: 0.15s; }
+    .hero__text > :nth-child(5) { animation-delay: 0.2s; }
+    .collage { animation: rise 0.8s 0.15s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+  }
+
+  /* secciones propias */
+  .sec { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+  .quien { padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+  .sec-head { max-width: 40rem; margin-bottom: clamp(1.8rem, 4vw, 3rem); }
+  .sec-head h2, .quien h2, .como h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); }
+  .sec-head p { margin-top: 0.9rem; max-width: 34rem; }
+
+  /* quién soy */
+  .quien__in { display: grid; gap: 2.5rem; align-items: start; }
+  @media (min-width: 820px) { .quien__in { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(2rem, 6vw, 5rem); } }
+  .arch { position: relative; margin: 0; aspect-ratio: 4 / 5; max-width: 26rem; border-radius: 999px 999px var(--r) var(--r); overflow: hidden; background: var(--sage); }
+  .arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .quien__cap { margin-top: 0.9rem; color: var(--ink-2); }
+  .quien__text p { max-width: 34rem; }
+  .quien__text p + p { margin-top: 1rem; }
+  .quien__text h2 { margin-bottom: 1.2rem; }
+  .facts { list-style: none; margin: 1.8rem 0 0; padding: 0; max-width: 34rem; }
+  .facts li { display: grid; grid-template-columns: minmax(7rem, 9rem) 1fr; gap: 0.5rem 1rem; padding: 0.8rem 0; border-top: 1px solid var(--line); }
+  .facts li:last-child { border-bottom: 1px solid var(--line); }
+  .facts strong { font-weight: 600; }
+  @media (max-width: 420px) { .facts li { grid-template-columns: 1fr; gap: 0.1rem; } }
+
+  /* qué ofrezco */
+  .tiles { display: grid; gap: clamp(1.4rem, 3vw, 2.2rem) clamp(1.2rem, 3vw, 2rem); list-style: none; margin: 0; padding: 0; }
+  @media (min-width: 640px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1000px) {
+    .tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .tile { grid-column: span 2; }
+    .tile:nth-child(-n + 2) { grid-column: span 3; }
+    .tile:nth-child(-n + 2) .tile__ph { aspect-ratio: 3 / 2; }
+  }
+  .tile__ph { position: relative; margin: 0; aspect-ratio: 4 / 3; border-radius: var(--r); overflow: hidden; background: var(--sage); }
+  .tile__ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .tile:hover .tile__ph img { transform: scale(1.035); }
+  .pos-r { object-position: 72% 40%; }
+  .pos-t { object-position: 50% 30%; }
+  .tile__body { padding: 1.1rem 0.15rem 0; }
+  .tile h3 { font-size: 1.5rem; }
+  .tile p { margin-top: 0.5rem; max-width: 34rem; }
+  .tile .btn { margin-top: 1rem; }
+
+  /* cómo trabajo */
+  .como, .band { padding: 3.5rem 1.1rem; }
+  .como > .wrap, .band > .wrap { padding: 0; max-width: 1052px; }
+  @media (min-width: 600px) { .como, .band { padding: 4.5rem 2.2rem; } }
+  @media (min-width: 1200px) { .como { padding: 6.5rem 3rem; } .band { padding: 6rem 3rem; } }
+  .como { background: var(--green); color: #fff; }
+  .como__in { display: grid; gap: 2.5rem; align-items: start; }
+  @media (min-width: 900px) { .como__in { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(2.5rem, 7vw, 6rem); } .como__intro { position: sticky; top: 6rem; } }
+  .como__intro p { margin-top: 1rem; max-width: 26rem; color: var(--on-green); }
+  .como__ph { position: relative; margin: 2rem 0 0; aspect-ratio: 4 / 3; max-width: 26rem; border-radius: var(--r); overflow: hidden; background: var(--green-deep); }
+  .como__ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hows { list-style: none; margin: 0; padding: 0; }
+  .hows li { padding: 1.5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.3); }
+  .hows li:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+  .hows h3 { font-size: 1.45rem; color: #fff; }
+  .hows p { margin-top: 0.5rem; max-width: 34rem; color: var(--on-green); }
+
+  /* primera sesión */
+  .band { background: var(--apricot); color: var(--ink); }
+  .band__in { display: grid; gap: 2.25rem; align-items: center; }
+  @media (min-width: 900px) { .band__in { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(2.5rem, 7vw, 6rem); } }
+  .band h2 { font-size: clamp(2rem, 4vw, 3rem); }
+  .band p { margin-top: 1rem; max-width: 32rem; }
+  .band__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.6rem; }
+  .band__note { margin-top: 1.3rem; }
+  .band__note a { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 0.22em; text-decoration-color: var(--green-deep); }
+  .band__note a:hover { text-decoration-color: currentColor; }
+  .band__ph { position: relative; margin: 0; aspect-ratio: 4 / 3; border-radius: var(--r); overflow: hidden; background: var(--green-deep); }
+  .band__ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  /* bloques compartidos (shared/sections.css) */
+  .sx { font-size: 1rem; line-height: 1.65; }
+  .sx__lead { font-size: 1.1rem; color: var(--ink); max-width: 34rem; }
+  .sx__card p, .sx__q p { color: var(--ink); max-width: 34rem; }
+  .sx__card { box-shadow: none; }
+  .sx__card h3 { font-size: 1.4rem; }
+  .sx__q summary { font-size: 1.1rem; padding: 1.2rem 0; }
+  .sx__q p { font-size: 1rem; }
+  .sx__meta { font-size: 1rem; }
+  .sx__tag { font-size: 0.8rem; }
+  .sx-ph__tag { font-size: 0.8rem; font-weight: 500; }
+  .sx__after, .sx__soft, .sx__pill { font-size: 1rem; }
+
+  .sx--doubts { background: var(--apricot); }
+  .sx--doubts .sx__in { padding-block: clamp(2.75rem, 6vw, 4.5rem); }
+  .sx--doubts .sx__link { text-decoration-color: var(--green-deep); }
+
+  .sx--proof { background: var(--sage); }
+  .sx--proof .sx__card { border-color: transparent; }
+
+  .sx--faq { background: var(--lilac); --sx-line: rgba(27, 42, 36, 0.22); }
+  .sx--faq .sx__q summary::after { color: var(--green); }
+
+  .sx--podcast { background: var(--green); --sx-ink: #fff; --sx-muted: var(--on-green); --sx-line: rgba(255, 255, 255, 0.4); }
+  .sx--podcast .sx__lead { color: var(--on-green); }
+  .sx--podcast .sx-ph { border: 0; }
+  .sx--podcast .sx__pill { color: #fff; }
+
+  .sx--contact { padding-bottom: 1rem; }
+  .sx__ico { background: var(--sage); border: 0; }
+  .sx__ctext small { font-size: 1rem; }
+
+  .sx--footer { font-size: 1rem; --sx-line: rgba(255, 255, 255, 0.4); border-top: 0; }
+  .sx__fcrisis { opacity: 1; color: var(--on-green); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#" aria-label="Claudia Pubill, psicóloga. Volver arriba">
+      <span class="brand__name">Claudia Pubill</span>
+      <span class="brand__role">psicóloga</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Secciones">
+      <a href="#quien" data-sx-go="quien">Quién soy</a>
+      <a href="#terapias" data-sx-go="terapias">Qué ofrezco</a>
+      <a href="#como" data-sx-go="como">Cómo trabajo</a>
+      <a href="#sx-preguntas" data-sx-go="preguntas">Preguntas</a>
+      <a class="nav__contact" href="#sx-contacto" data-sx-go="contacto">Escríbeme</a>
+    </nav>
+    <button class="btn btn--ghost btn--top" type="button" data-sx-go="contacto">Escríbeme</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero__in">
+      <div class="hero__text">
+        <h1 id="hero-h">Psicóloga para niños, adolescentes, familias, parejas y adultos.</h1>
+        <p class="hero__lead">Hola, soy Claudia. Nos vemos en mi consulta de Barcelona o por videollamada, donde estés más a gusto.</p>
+        <p class="hero__p">Puedes venir con una idea clara de lo que te pasa o solo con la sensación de que algo no va bien. Con eso basta para empezar.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#quien" data-sx-go="quien">Conóceme</a>
+          <a class="link" href="#terapias" data-sx-go="terapias">Ver las terapias <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <p class="hero__meta">Colegiada nº [número].</p>
+      </div>
+      <div class="collage" aria-label="Fotos de ejemplo de sesiones de terapia">
+        <div class="collage__block" aria-hidden="true"></div>
+        <figure class="collage__main">
+          <img src="shared/img/people-individual.jpg" alt="Dos mujeres conversan sentadas en un sofá, con cuadros en la pared" width="1600" height="1066" fetchpriority="high" decoding="async">
+          <figcaption class="tag">Foto de ejemplo</figcaption>
+        </figure>
+        <figure class="collage__second">
+          <img src="shared/img/people-adolescente.jpg" alt="Una chica joven con auriculares mira por una ventana llena de sol" width="1600" height="1068" decoding="async">
+          <figcaption class="tag">Foto de ejemplo</figcaption>
+        </figure>
+        <p class="collage__chip">En Barcelona u online</p>
+      </div>
+    </div>
+  </section>
+
+  <div data-sx="doubts"></div>
+
+  <section id="quien" class="sec quien" data-sx-anchor="quien" aria-labelledby="quien-h">
+    <div class="wrap quien__in">
+      <div>
+        <figure class="arch">
+          <img src="shared/img/people-escucha.jpg" alt="Manos con un bolígrafo y una libreta abierta, con luz de ventana" width="1600" height="1066" loading="lazy" decoding="async">
+          <figcaption class="tag">Foto de ejemplo</figcaption>
+        </figure>
+        <p class="quien__cap">[Foto de Claudia pendiente.]</p>
+      </div>
+      <div class="quien__text">
+        <h2 id="quien-h">Quién soy</h2>
+        <p>Soy curiosa y reflexiva. Escucho con atención y procuro que te sientas a gusto contándome lo que te pasa.</p>
+        <p>Me motiva ver a la gente cambiar, y para eso parto de su historia tal como es, sin juzgarla. Soy cercana, pero no dejo de ser tu psicóloga.</p>
+        <p>Mi enfoque es integrador y lo ajusto a lo que necesita la persona que tengo delante. Formo parte de equipos multidisciplinares.</p>
+        <ul class="facts">
+          <li><strong>Colegiada</strong><span>nº [número]</span></li>
+          <li><strong>Formación</strong><span>[Titulación, máster y habilitación sanitaria: pendiente.]</span></li>
+          <li><strong>Consulta</strong><span>En Barcelona o por videollamada</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="terapias" class="sec" data-sx-anchor="terapias" aria-labelledby="terapias-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="terapias-h">Qué ofrezco</h2>
+        <p>No hace falta que sepas cuál necesitas: lo vemos en la primera sesión.</p>
+      </div>
+      <ul class="tiles">
+        <li class="tile">
+          <figure class="tile__ph">
+            <img class="pos-r" src="shared/img/people-individual.jpg" alt="Una psicóloga escucha a una mujer en un sofá" width="1600" height="1066" loading="lazy" decoding="async">
+            <figcaption class="tag">Foto de ejemplo</figcaption>
+          </figure>
+          <div class="tile__body">
+            <h3>Terapia individual</h3>
+            <p>Ansiedad, tristeza, un duelo, una decisión a la que no paras de dar vueltas o un malestar que arrastras desde hace tiempo. Las sesiones son solo contigo.</p>
+            <button class="btn btn--ghost" type="button" data-info="individual">En qué consiste<span class="sr"> la terapia individual</span></button>
+          </div>
+        </li>
+        <li class="tile">
+          <figure class="tile__ph">
+            <img src="shared/img/people-pareja.jpg" alt="Una pareja se da la mano en un sofá verde durante una sesión" width="1600" height="1066" loading="lazy" decoding="async">
+            <figcaption class="tag">Foto de ejemplo</figcaption>
+          </figure>
+          <div class="tile__body">
+            <h3>Terapia de pareja</h3>
+            <p>Si tu pareja y tú discutís siempre por lo mismo, o ya no sabéis si seguir juntos, trabajo con los dos a la vez.</p>
+            <button class="btn btn--ghost" type="button" data-info="pareja">En qué consiste<span class="sr"> la terapia de pareja</span></button>
+          </div>
+        </li>
+        <li class="tile">
+          <figure class="tile__ph">
+            <img src="shared/img/people-familia.jpg" alt="Una familia con una niña en un sofá mientras la psicóloga toma notas" width="1600" height="1064" loading="lazy" decoding="async">
+            <figcaption class="tag">Foto de ejemplo</figcaption>
+          </figure>
+          <div class="tile__body">
+            <h3>Terapia familiar</h3>
+            <p>Cuando algo en casa afecta a todos: una separación, un duelo, la convivencia con un adolescente.</p>
+            <button class="btn btn--ghost" type="button" data-info="familiar">En qué consiste<span class="sr"> la terapia familiar</span></button>
+          </div>
+        </li>
+        <li class="tile">
+          <figure class="tile__ph">
+            <img class="pos-t" src="shared/img/people-infancia.jpg" alt="Una madre y su hija dibujan juntas en una mesa de madera" width="1600" height="1067" loading="lazy" decoding="async">
+            <figcaption class="tag">Foto de ejemplo</figcaption>
+          </figure>
+          <div class="tile__body">
+            <h3>Terapia infantojuvenil</h3>
+            <p>Miedos, rabietas, cambios de humor, problemas en el colegio. Adapto la forma de trabajar a la edad de cada niño o adolescente.</p>
+            <button class="btn btn--ghost" type="button" data-info="infantojuvenil">En qué consiste<span class="sr"> la terapia infantojuvenil</span></button>
+          </div>
+        </li>
+        <li class="tile">
+          <figure class="tile__ph">
+            <img src="shared/img/people-neuro.jpg" alt="Una niña pequeña y una psicóloga en una mesa baja con una carpeta" width="1600" height="1066" loading="lazy" decoding="async">
+            <figcaption class="tag">Foto de ejemplo</figcaption>
+          </figure>
+          <div class="tile__body">
+            <h3>Neuroevaluación</h3>
+            <p>Para cuando a alguien le cuesta aprender o prestar atención y no se sabe por qué. Al terminar, te entrego un informe por escrito.</p>
+            <button class="btn btn--ghost" type="button" data-info="neuroevaluacion">En qué consiste<span class="sr"> la neuroevaluación</span></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="como" class="como" data-sx-anchor="como" aria-labelledby="como-h">
+    <div class="wrap como__in">
+      <div class="como__intro">
+        <h2 id="como-h">Cómo trabajo</h2>
+        <p>Lo que puedes esperar de mí en cualquiera de las terapias.</p>
+        <figure class="como__ph">
+          <img src="shared/img/online-mesa.jpg" alt="Mesa de madera junto a una ventana con un portátil, una libreta y una taza de té" width="1500" height="1006" loading="lazy" decoding="async">
+          <figcaption class="tag">Foto de ejemplo</figcaption>
+        </figure>
+      </div>
+      <ul class="hows">
+        <li>
+          <h3>Atención individualizada</h3>
+          <p>Antes de proponerte nada, te escucho hasta entender por qué vienes y qué te gustaría cambiar.</p>
+        </li>
+        <li>
+          <h3>Terapia integradora</h3>
+          <p>Tomo de distintos enfoques lo que a ti te sirva, y sobre la marcha revisamos si funciona.</p>
+        </li>
+        <li>
+          <h3>Supervisión de casos con un equipo terapéutico</h3>
+          <p>Comento los casos con otros profesionales, sin datos que te identifiquen. Así no dependes solo de mi criterio.</p>
+        </li>
+        <li>
+          <h3>Formación constante</h3>
+          <p>Sigo formándome. [Cursos y especializaciones recientes: pendiente.]</p>
+        </li>
+        <li>
+          <h3>Estudios y experiencia</h3>
+          <p>[Titulación, máster y años de consulta: pendiente.] Y cada semana de consulta me sigue enseñando.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div data-sx="proof"></div>
+  <div data-sx="places"></div>
+  <div data-sx="faq"></div>
+  <div data-sx="blog"></div>
+  <div data-sx="podcast"></div>
+
+  <section class="band" aria-labelledby="band-h">
+    <div class="wrap band__in">
+      <div>
+        <h2 id="band-h">Pedir una primera sesión</h2>
+        <p>Me cuentas qué te trae, te explico cómo trabajo y al final vemos si seguimos.</p>
+        <div class="band__cta">
+          <button class="btn" type="button" data-book data-book-mode="online"><span class="sr">Primera sesión </span>Online</button>
+          <button class="btn" type="button" data-book data-book-mode="presencial"><span class="sr">Primera sesión </span>Presencial</button>
+        </div>
+        <p class="band__note">Si prefieres preguntar algo antes, <a href="#sx-contacto" data-sx-go="contacto">escríbeme</a>.</p>
+      </div>
+      <figure class="band__ph">
+        <img src="shared/img/e-sobremesa.jpg" alt="Mesa de madera junto a una ventana con dos tazas de café, un trozo de bizcocho, una servilleta y una planta" width="1200" height="896" loading="lazy" decoding="async">
+        <figcaption class="tag">Imagen generada, de ejemplo</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div data-sx="contact"></div>
+</main>
+
+<div data-sx="footer"></div>
+
+<script>window.CLAUDIA={whatsapp:'34600000000',calLink:''}</script>
+<script src="shared/services.js" defer></script>
+<script src="shared/sections.js" defer></script>
+<script src="shared/booking.js" defer></script>
+<script src="shared/switcher.js" defer></script>
+<script>
+  (() => {
+    const top = document.querySelector('.top');
+    const btn = document.querySelector('.menu-btn');
+    const nav = document.getElementById('nav');
+    const close = () => { top.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); };
+    btn.addEventListener('click', () => {
+      const open = top.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    nav.addEventListener('click', (e) => { if (e.target.closest('a')) close(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && top.classList.contains('is-open')) { close(); btn.focus(); }
+    });
+    document.querySelector('.brand').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+  })();
+</script>
+</body>
+</html>

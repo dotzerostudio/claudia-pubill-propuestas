@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claudia Pubill · Psicóloga · Propuesta D, Ventana</title>
+<meta name="description" content="Psicóloga para niños, adolescentes, familias, parejas y adultos. Terapia online y presencial.">
+<meta name="theme-color" content="#E9DDD8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%2326332B'/%3E%3Ctext%20x='16'%20y='21'%20text-anchor='middle'%20font-family='Georgia,serif'%20font-size='14'%20fill='%23F4F6F0'%3ECP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..600;1,300..600&family=Jost:wght@300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/booking.css">
+<link rel="stylesheet" href="shared/sections.css">
+<style>
+  /* ============================================================
+     COLORES Y TIPOGRAFÍA — aquí se cambia el aspecto de toda la web
+     ============================================================ */
+  :root{
+    --wall:#E9DDD8;      /* pared de yeso rosado (fondo del hero) */
+    --bone:#F4F6F0;      /* pálido salvia: fondos claros y texto sobre oscuro */
+    --paper:#F3EEE8;     /* fondo de "Qué ofrezco" */
+    --ink:#26332B;       /* verde bosque casi negro: texto */
+    --ink-2:#44524A;     /* texto secundario */
+    --olive:#3F4F33;     /* botones */
+    --olive-dark:#33412A;
+    --leaf:#2E3B27;      /* sombra de las hojas */
+    --sage:#C9D2C0;
+    --olive-tint:#B4BDA0;
+    --clay:#DDB9AE;
+    --line:rgba(38,51,43,.22);
+    --display:'Cormorant Garamond',Georgia,serif;
+    --body:'Jost',system-ui,sans-serif;
+    --gutter:clamp(1.25rem,5vw,4.5rem);
+
+    /* ventana de reserva (shared/booking.css) */
+    --bk-bg:#F4F6F0; --bk-ink:#26332B; --bk-muted:#55635A; --bk-line:rgba(38,51,43,.16);
+    --bk-accent:#3F4F33; --bk-accent-ink:#F4F6F0; --bk-radius:14px;
+    --bk-display:var(--display); --bk-display-weight:400; --bk-body:var(--body);
+
+    /* bloques compartidos (shared/sections.css): dudas, con quién trabajo, dónde nos vemos, preguntas, blog, podcast, contacto, pie */
+    --wall-soft:#EFE6E1;   /* yeso más claro: fondo de "dudas" */
+    --sx-ink:var(--ink); --sx-muted:var(--ink-2); --sx-line:var(--line);
+    --sx-accent:var(--olive); --sx-accent-ink:var(--bone);
+    --sx-alt:var(--paper); --sx-card:transparent;
+    --sx-radius:22px; --sx-btn-radius:999px;
+    --sx-display:var(--display); --sx-display-weight:400; --sx-body:var(--body);
+    --sx-max:calc(76rem + 2*var(--gutter)); --sx-gutter:var(--gutter);
+    --sx-foot-bg:var(--ink); --sx-foot-ink:var(--sage);
+
+    /* sombra de la planta como imagen suelta (la misma de #planta), para los huecos de foto */
+    --leaf-shadow:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20760'%3E%3Cdefs%3E%3Cpath%20id='h'%20d='M0,0%20C20,-30%2070,-40%20110,-5%20C70,25%2020,25%200,0Z'/%3E%3C/defs%3E%3Cg%20fill='%232E3B27'%3E%3Cpath%20d='M548,760%20C540,520%20400,300%20150,80'%20fill='none'%20stroke='%232E3B27'%20stroke-width='5'%20stroke-linecap='round'/%3E%3Cuse%20href='%23h'%20transform='translate(534%20646)%20rotate(-164)%20scale(1.45)'/%3E%3Cuse%20href='%23h'%20transform='translate(520%20590)%20rotate(-48)%20scale(1.35)'/%3E%3Cuse%20href='%23h'%20transform='translate(500%20535)%20rotate(-167)%20scale(1.26)'/%3E%3Cuse%20href='%23h'%20transform='translate(476%20480)%20rotate(-64)%20scale(1.17)'/%3E%3Cuse%20href='%23h'%20transform='translate(448%20426)%20rotate(-168)%20scale(1.07)'/%3E%3Cuse%20href='%23h'%20transform='translate(414%20372)%20rotate(-79)%20scale(0.97)'/%3E%3Cuse%20href='%23h'%20transform='translate(376%20319)%20rotate(-169)%20scale(0.88)'/%3E%3Cuse%20href='%23h'%20transform='translate(334%20265)%20rotate(-92)%20scale(0.79)'/%3E%3Cuse%20href='%23h'%20transform='translate(287%20212)%20rotate(-168)%20scale(0.69)'/%3E%3Cuse%20href='%23h'%20transform='translate(235%20159)%20rotate(-104)%20scale(0.59)'/%3E%3Cuse%20href='%23h'%20transform='translate(179%20106)%20rotate(-138)%20scale(0.5)'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bone);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,p,ul,figure{margin:0}
+  ul{padding:0;list-style:none}
+  a{color:inherit}
+  button{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--olive);outline-offset:3px;border-radius:6px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  section[id],[data-sx-anchor]{scroll-margin-top:4.5rem}
+
+  /* botones en forma de píldora */
+  .pill{display:inline-flex;align-items:center;gap:.8rem;min-height:2.9rem;padding:0 1.7rem;border:0;border-radius:999px;font:500 1rem/1 var(--body);text-decoration:none;cursor:pointer;transition:background .25s,transform .25s,box-shadow .25s}
+  .pill--olive{background:var(--olive);color:var(--bone)}
+  .pill--olive:hover{background:var(--olive-dark)}
+  .pill--bone{background:var(--bone);color:var(--olive)}
+  .pill--bone:hover{background:#fff}
+  .pill--ghost{background:transparent;color:var(--bone);box-shadow:inset 0 0 0 1.5px rgba(244,246,240,.7)}
+  .pill--ghost:hover{background:rgba(244,246,240,.12)}
+
+  /* ============================================================
+     MENÚ FLOTANTE
+     ============================================================ */
+  .top{position:fixed;top:14px;left:0;right:0;z-index:30;display:flex;justify-content:center;padding:0 12px;pointer-events:none}
+  .nav{pointer-events:auto;display:flex;align-items:center;gap:.3rem;padding:.3rem;border-radius:999px;max-width:100%;
+    background:rgba(244,246,240,.86);-webkit-backdrop-filter:blur(14px) saturate(1.1);backdrop-filter:blur(14px) saturate(1.1);
+    box-shadow:0 0 0 1px rgba(38,51,43,.07),0 10px 30px -14px rgba(38,51,43,.35)}
+  .mono{flex:none;width:2.75rem;height:2.75rem;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--bone);text-decoration:none;font:500 1.1rem/1 var(--display);letter-spacing:.03em}
+  .nav ul{display:flex;gap:.1rem;margin:0 .5rem}
+  .nav ul a{display:block;padding:.65rem .9rem;border-radius:999px;text-decoration:none;font:500 .95rem/1 var(--body);transition:background .2s}
+  .nav ul a:hover{background:rgba(63,79,51,.1)}
+  .nav .pill{min-height:2.75rem;padding:0 1.2rem;font-size:.93rem}
+
+  /* ============================================================
+     HERO — la luz de la ventana y la sombra de la planta
+     ============================================================ */
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:6.5rem var(--gutter) clamp(4.5rem,9vh,6rem);background:var(--wall);overflow:hidden;isolation:isolate}
+  .hero::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:radial-gradient(ellipse 85% 75% at 42% 42%,rgba(233,221,216,0) 45%,rgba(120,88,78,.2) 100%)} /* viñeta suave */
+
+  /* paralelogramo de luz con dos travesaños */
+  .light{position:absolute;z-index:0;top:-10%;right:5%;width:min(46vw,660px);height:122%;transform:skewX(-14deg);
+    background:linear-gradient(165deg,rgba(255,247,232,.75),rgba(255,247,232,.15));filter:blur(2px)}
+  .light i{position:absolute;background:rgba(140,108,98,.17);filter:blur(2px)}
+  .light i:nth-child(1){top:0;bottom:0;left:50%;width:clamp(10px,1.5vw,20px)}   /* travesaño vertical */
+  .light i:nth-child(2){left:0;right:0;top:40%;height:clamp(10px,1.5vw,20px)}   /* travesaño horizontal */
+
+  /* sombra de planta: dos copias (una difusa, otra más nítida y pequeña) que se mecen juntas */
+  .plant{position:absolute;z-index:1;right:-3vw;bottom:-6vh;width:min(56vw,800px);aspect-ratio:600/760;
+    mix-blend-mode:multiply;transform-origin:90% 100%;animation:sway 9s ease-in-out infinite alternate;pointer-events:none}
+  .plant svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .plant__soft{filter:blur(5px);opacity:.26}
+  .plant__sharp{filter:blur(2px);opacity:.14}
+  @keyframes sway{from{transform:rotate(-1.2deg)}to{transform:rotate(1.4deg)}}
+
+  .hero__in{position:relative;z-index:3}
+  h1{font:300 clamp(4.4rem,11vw,10rem)/.88 var(--display);letter-spacing:-.02em;margin-left:-.04em}
+  h1 span{display:block;opacity:0;transform:translateY(.25em);animation:rise 1.2s cubic-bezier(.2,.7,.1,1) forwards}
+  h1 span:nth-child(2){animation-delay:.15s}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  .hero__row{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:clamp(1.8rem,5vh,3.2rem);padding-top:1.5rem;border-top:1px solid rgba(38,51,43,.38)}
+  .hero__txt p{max-width:33rem;font-size:clamp(1.08rem,1.5vw,1.25rem);line-height:1.55}
+  .hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.8rem;margin-top:1.5rem}
+  .cta{padding:0 .45rem 0 1.6rem;min-height:3.3rem}
+  .cta__ico{display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--bone);color:var(--olive);transition:transform .35s}
+  .cta:hover .cta__ico{transform:translateY(3px)}
+  .quiet{padding:.7rem 0;font:500 1rem/1 var(--body);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;transition:text-underline-offset .2s}
+  .quiet:hover{text-underline-offset:9px}
+
+  /* ============================================================
+     SECCIONES
+     ============================================================ */
+  section.sec{padding:clamp(4.5rem,9vw,8rem) var(--gutter)}
+  .wrap{max-width:76rem;margin:0 auto}
+  .head{border-top:1px solid var(--line);padding-top:1.1rem;margin-bottom:clamp(2rem,5vw,3.6rem)}
+  .head h2{font:300 clamp(2.6rem,6vw,5rem)/.95 var(--display);letter-spacing:-.02em}
+  .head--label h2{font:500 1rem/1.3 var(--body);letter-spacing:0}
+
+  /* — Quién soy — */
+  .about{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);grid-template-areas:"lead fig" "rest fig";column-gap:clamp(2rem,7vw,7rem);row-gap:clamp(2rem,4vw,3rem);align-items:start}
+  .about__lead{grid-area:lead;font:300 clamp(1.95rem,3.7vw,3.4rem)/1.13 var(--display);letter-spacing:-.015em}
+  .about__rest{grid-area:rest;display:grid;grid-template-columns:1fr 1fr;gap:1.6rem 2.2rem;color:var(--ink-2)}
+  .about__rest p{max-width:24rem}
+  .photo{grid-area:fig;position:relative;width:100%;max-width:26rem;margin-left:auto;aspect-ratio:3/4.1;border-radius:999px 999px 0 0;overflow:hidden;
+    background:linear-gradient(180deg,#D3DBC9 0%,#E2DDD2 55%,#E9DDD8 100%);box-shadow:inset 0 0 0 1px rgba(38,51,43,.13)}
+  .photo::before{content:"";position:absolute;top:-10%;bottom:-10%;left:26%;right:6%;transform:skewX(-14deg);background:linear-gradient(165deg,rgba(255,247,232,.7),rgba(255,247,232,.08));filter:blur(2px)}
+  .photo svg{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:multiply;filter:blur(3px);opacity:.3}
+  .photo figcaption{position:absolute;left:50%;bottom:1.6rem;transform:translateX(-50%);white-space:nowrap;padding:.5rem 1.1rem;border-radius:999px;background:rgba(244,246,240,.82);font-size:.95rem;color:var(--ink)}
+
+  /* — Qué ofrezco: ventanas con arco — */
+  .services{background:var(--paper);padding-bottom:clamp(4rem,8vw,7rem)}
+  .rail{overflow-x:auto;scroll-snap-type:x proximity;margin:0 calc(-1*var(--gutter));padding:1.2rem var(--gutter) 1.2rem;scroll-padding-inline:var(--gutter);scrollbar-width:thin;scrollbar-color:rgba(38,51,43,.35) transparent}
+  .arches{display:flex;align-items:flex-end;gap:1rem;width:max-content}
+  .arch{position:relative;flex:0 0 min(72vw,17rem);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:2rem 1.5rem 1.7rem;border-radius:999px 999px 0 0;transition:transform .4s cubic-bezier(.2,.7,.1,1)}
+  .arch::before{content:"";position:absolute;inset:9px 9px 0;border-radius:999px 999px 0 0;border:1px solid rgba(38,51,43,.15);border-bottom:0;pointer-events:none}
+  .arch:nth-child(1){min-height:25rem;background:var(--bone);box-shadow:0 0 0 1px rgba(38,51,43,.1)}
+  .arch:nth-child(2){min-height:30rem;background:var(--sage)}
+  .arch:nth-child(3){min-height:27rem;background:var(--wall)}
+  .arch:nth-child(4){min-height:32rem;background:var(--olive-tint)}
+  .arch:nth-child(5){min-height:26rem;background:var(--clay)}
+  .arch h3{font:400 clamp(1.7rem,2.1vw,2rem)/1.05 var(--display);letter-spacing:-.01em;hyphens:auto;overflow-wrap:break-word}
+  .arch p{margin-top:.7rem;font-size:.96rem;line-height:1.5}
+  .arch button{align-self:flex-start;margin-top:1.1rem;padding:.55rem 0;border:0;background:none;cursor:pointer;font:500 .98rem/1 var(--body);
+    text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;transition:text-underline-offset .2s}
+  .arch button:hover{text-underline-offset:9px}
+
+  /* — Cómo trabajo — */
+  .dif li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:1rem 3rem;align-items:baseline;padding:clamp(1.4rem,3vw,2.1rem) 0;border-top:1px solid var(--line)}
+  .dif li:last-child{border-bottom:1px solid var(--line)}
+  .dif h3{font:400 clamp(1.8rem,3.2vw,2.35rem)/1.08 var(--display);letter-spacing:-.01em}
+  .dif p{max-width:30rem;color:var(--ink-2)}
+
+  /* — Reserva — */
+  .book{background:var(--olive);color:var(--bone)}
+  .book .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:end}
+  .book h2{font:300 clamp(2.8rem,7.2vw,6.2rem)/.94 var(--display);letter-spacing:-.02em}
+  .book p{max-width:28rem;margin-bottom:1.7rem;color:rgba(244,246,240,.88)}
+  .book__btns{display:flex;flex-wrap:wrap;gap:.8rem}
+  .book__alt{display:inline-block;margin-top:1.1rem;padding:.5rem 0;font-weight:500;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+  .book :focus-visible,.sx--footer :focus-visible{outline-color:var(--bone)}
+
+  /* ============================================================
+     BLOQUES COMPARTIDOS (shared/sections.js)
+     Más callados que el hero: titulares más pequeños, sin cajas, con las mismas líneas finas,
+     arcos y luz de ventana. Los huecos de foto son ventanas con sombra de hojas, sin movimiento.
+     ============================================================ */
+  .sx__in{padding-block:clamp(4rem,8vw,7rem)}
+  .sx__head{max-width:none;border-top:1px solid var(--line);padding-top:1.1rem;margin-bottom:clamp(2rem,5vw,3.4rem)}
+  .sx__h{font:300 clamp(2.3rem,5vw,4rem)/1 var(--display);letter-spacing:-.02em}
+  .sx__lead{max-width:36rem;margin-top:1rem;font-size:1.1rem}
+  .sx__meta{color:var(--ink-2)}
+
+  .sx__btn{min-height:2.9rem;padding:0 1.6rem;background:transparent;color:var(--olive);box-shadow:inset 0 0 0 1.5px var(--olive);font-weight:500;transition:background .25s,color .25s}
+  .sx__btn:hover{background:var(--olive);color:var(--bone);filter:none}
+  .sx__link{font-weight:500;text-decoration-thickness:1px;text-underline-offset:6px}
+
+  /* tarjetas sin caja: una línea fina arriba, como la lista de "Cómo trabajo" */
+  .sx__card{gap:.7rem;padding:1.3rem 0 0;border:0;border-top:1px solid var(--line);border-radius:0;background:none}
+  .sx__card h3{font:400 clamp(1.6rem,2.4vw,2rem)/1.1 var(--display);letter-spacing:-.01em}
+  .sx__card--media{padding:0;border-top:0;gap:0}
+  .sx__cardbody{padding:1.2rem 0 0}
+
+  /* huecos de foto: ventana con luz y sombra de hojas (mismo lenguaje que la foto de "Quién soy") */
+  .sx-ph{position:relative;isolation:isolate;overflow:hidden;justify-content:center;align-items:flex-end;aspect-ratio:4/3;padding:0;border:0;border-radius:var(--sx-radius);
+    background:linear-gradient(180deg,#D3DBC9 0%,#E2DDD2 55%,var(--wall) 100%);box-shadow:inset 0 0 0 1px rgba(38,51,43,.13)}
+  .sx-ph::before{content:"";position:absolute;top:-10%;bottom:-10%;left:26%;right:6%;transform:skewX(-14deg);background:linear-gradient(165deg,rgba(255,247,232,.7),rgba(255,247,232,.08));filter:blur(2px)}
+  .sx-ph::after{content:"";position:absolute;inset:0;background:var(--leaf-shadow) 100% 100%/auto 135% no-repeat;mix-blend-mode:multiply;filter:blur(3px);opacity:.26}
+  .sx-ph figcaption{position:relative;z-index:2;margin-bottom:1.1rem;padding:.5rem 1.1rem;border-radius:999px;background:rgba(244,246,240,.84);color:var(--ink);font-size:.92rem;text-align:center}
+  .sx-ph--2{background:linear-gradient(180deg,#F0E9E3 0%,#E9DDD8 55%,var(--clay) 100%)}
+  .sx-ph--2::after{transform:scaleX(-1)}
+  .sx-ph--2::before{left:6%;right:26%;transform:skewX(14deg)}
+  .sx-ph--3{background:linear-gradient(180deg,#DCE2D0 0%,#C9D2C0 60%,var(--olive-tint) 100%)}
+  .sx--podcast .sx-ph{aspect-ratio:1/1;max-width:20rem;border:0;border-radius:999px 999px 0 0;background:linear-gradient(180deg,#F0E9E3 0%,#E9DDD8 55%,var(--clay) 100%)}
+
+  /* dudas: ventana a un lado y el texto al otro, sobre yeso más claro */
+  .doubts{padding:clamp(4rem,8vw,7rem) var(--gutter);background:var(--wall-soft)}
+  .doubts__in{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;column-gap:clamp(2.5rem,8vw,8rem);max-width:76rem;margin:0 auto}
+  .photo--win{grid-area:auto;width:clamp(9rem,17vw,14rem);max-width:none;margin:0;background:linear-gradient(180deg,#F3EDE7 0%,#EBDFD9 55%,var(--clay) 100%)}
+  .sx--doubts .sx__in{max-width:none;padding:0}
+  .sx--doubts .sx__head{max-width:46rem;margin:0;padding-top:0;border-top:0}
+  .sx--doubts .sx__row{margin-top:2rem}
+
+  /* con quién trabajo: tres columnas con un arco pequeño, igual que las ventanas de "Qué ofrezco" */
+  .sx--proof .sx__card::before{content:"";flex:none;width:1.7rem;height:2.2rem;margin-bottom:.6rem;border-radius:999px 999px 0 0;background:var(--sage);box-shadow:inset 0 0 0 1px rgba(38,51,43,.14)}
+  .sx--proof .sx__card:nth-child(2)::before{background:var(--wall)}
+  .sx--proof .sx__card:nth-child(3)::before{background:var(--clay)}
+
+  /* dónde nos vemos: dos ventanas con arco, la segunda un poco más abajo */
+  .sx--places .sx__cards{grid-template-columns:minmax(0,24rem);justify-content:start;gap:2.5rem clamp(2rem,8vw,8rem)}
+  .sx--places .sx-ph{aspect-ratio:4/4.3;border-radius:999px 999px 0 0}
+  .sx--places .sx__cardbody{padding-top:1.4rem}
+
+  /* preguntas: titular a la izquierda y la lista a la derecha, con una sola línea por arriba */
+  .sx--faq .sx__in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:0;align-items:start}
+  .sx--faq .sx__head{margin:0;padding-right:clamp(1.5rem,5vw,4rem)}
+  .sx--faq .sx__faq{max-width:none;border-top-color:var(--line)}
+  .sx__q summary{padding:1.2rem 0;font-weight:500}
+  .sx__q summary:hover{color:var(--olive)}
+
+  /* blog y podcast */
+  .sx--blog .sx__cards{gap:clamp(1.6rem,3vw,2.4rem)}
+  .sx__tag{border-color:var(--line)}
+
+  /* contacto: una franja tranquila */
+  .sx--contact .sx__in{padding-block:clamp(3rem,6vw,5rem)}
+  .sx--contact .sx__h{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+  .sx--contact .sx__head{margin-bottom:clamp(1.6rem,3vw,2.2rem)}
+  .sx__ico{background:var(--paper)}
+  .sx__ctext strong{font-size:1.5rem}
+
+  /* pie: el mismo verde bosque de antes */
+  .sx--footer{--sx-line:rgba(244,246,240,.2);border-top:0}
+  .sx--footer .sx__in{padding-top:clamp(3rem,6vw,4.5rem);padding-bottom:5rem}
+  .sx--footer a,.sx__flink{color:var(--bone);opacity:1}
+  .sx__fbrand p,.sx__fcrisis{opacity:1}
+  .sx__fcrisis{max-width:68ch}
+  .sx__fcopy{opacity:1;color:#A9B3A5}
+  .sx__fbrand::before{content:"CP";display:grid;place-items:center;width:2.75rem;height:2.75rem;margin-bottom:1rem;border-radius:50%;background:var(--bone);color:var(--ink);font:500 1.1rem/1 var(--display);letter-spacing:.03em}
+  .sx__fname{font:400 1.9rem/1.1 var(--display);color:var(--bone)}
+  .sx__fh{font:500 1rem/1.3 var(--body);color:var(--bone)}
+
+  /* ============================================================
+     PANTALLAS
+     ============================================================ */
+  @media (min-width:1100px){
+    .rail{overflow:visible;margin:0;padding:1.2rem 0}
+    .arches{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));width:auto;gap:1rem}
+    .arch{flex:none;padding-inline:1rem}
+    .arch h3{font-size:clamp(1.45rem,1.65vw,1.9rem)}
+  }
+  @media (hover:hover) and (prefers-reduced-motion:no-preference){
+    .arch:hover{transform:translateY(-8px)}
+  }
+  @media (min-width:721px){
+    .sx--places .sx__cards{grid-template-columns:repeat(2,minmax(0,24rem))}
+    .sx--places .sx__cards>li:nth-child(2){margin-top:clamp(0rem,5vw,4rem)}
+  }
+  @media (max-width:900px){
+    .sx--faq .sx__in{grid-template-columns:1fr}
+    .sx--faq .sx__head{padding-right:0;margin-bottom:clamp(1.4rem,4vw,2rem)}
+  }
+  @media (max-width:860px){
+    .about{grid-template-columns:1fr;grid-template-areas:"lead" "fig" "rest"}
+    .photo{margin:0;max-width:22rem}
+    .about__rest{grid-template-columns:1fr}
+    .book .wrap{grid-template-columns:1fr}
+    .dif li{grid-template-columns:1fr}
+    .hero__row{grid-template-columns:1fr;gap:0}
+    .hero__row>div:first-child{display:none}
+    .plant{width:min(120vw,620px);right:-30vw;bottom:-4vh}
+    .light{width:62vw;right:-8%}
+  }
+  @media (max-width:720px){
+    .doubts__in{grid-template-columns:1fr;row-gap:1.8rem}
+    .photo--win{width:6.5rem}
+    .sx--blog .sx-ph{aspect-ratio:16/9}
+    .sx--places .sx-ph{aspect-ratio:4/3.5}
+    .sx--podcast .sx-ph{max-width:15rem}
+    .nav ul{display:none}
+    .nav .pill{padding:0 1.05rem;font-size:.9rem}
+  }
+  @media (max-width:420px){
+    .nav .pill{padding:0 .9rem;font-size:.86rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .plant{animation:none}
+    h1 span{animation:none;opacity:1;transform:none}
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- Menú flotante: enlaces (se ocultan en móvil) + botón que lleva al contacto -->
+<header class="top">
+  <nav class="nav" aria-label="Principal">
+    <a class="mono" href="#inicio" aria-label="Claudia Pubill, inicio">CP</a>
+    <ul>
+      <li><a href="#quien-soy">Quién soy</a></li>
+      <li><a href="#servicios">Qué ofrezco</a></li>
+      <li><a href="#como-trabajo">Cómo trabajo</a></li>
+      <li><a href="#sx-preguntas" data-sx-go="preguntas">Preguntas</a></li>
+    </ul>
+    <button class="pill pill--olive" type="button" data-sx-go="contacto">Escríbeme</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ═════════ HERO ═════════ -->
+  <section class="hero" id="inicio" aria-labelledby="t-hero">
+    <div class="light" aria-hidden="true"><i></i><i></i></div>
+
+    <!-- Sombra de planta (decorativa). Las hojas se definen una vez en #hoja y se colocan con transform -->
+    <div class="plant" aria-hidden="true">
+      <svg class="plant__soft" viewBox="0 0 600 760" focusable="false">
+        <defs>
+          <path id="hoja" d="M0,0 C20,-30 70,-40 110,-5 C70,25 20,25 0,0Z"/>
+          <g id="planta" fill="#2E3B27">
+            <path d="M548,760 C540,520 400,300 150,80" fill="none" stroke="#2E3B27" stroke-width="5" stroke-linecap="round"/>
+            <use href="#hoja" transform="translate(534 646) rotate(-164) scale(1.45)"/>
+            <use href="#hoja" transform="translate(520 590) rotate(-48) scale(1.35)"/>
+            <use href="#hoja" transform="translate(500 535) rotate(-167) scale(1.26)"/>
+            <use href="#hoja" transform="translate(476 480) rotate(-64) scale(1.17)"/>
+            <use href="#hoja" transform="translate(448 426) rotate(-168) scale(1.07)"/>
+            <use href="#hoja" transform="translate(414 372) rotate(-79) scale(0.97)"/>
+            <use href="#hoja" transform="translate(376 319) rotate(-169) scale(0.88)"/>
+            <use href="#hoja" transform="translate(334 265) rotate(-92) scale(0.79)"/>
+            <use href="#hoja" transform="translate(287 212) rotate(-168) scale(0.69)"/>
+            <use href="#hoja" transform="translate(235 159) rotate(-104) scale(0.59)"/>
+            <use href="#hoja" transform="translate(179 106) rotate(-138) scale(0.50)"/>
+          </g>
+        </defs>
+        <use href="#planta"/>
+      </svg>
+      <svg class="plant__sharp" viewBox="0 0 600 760" focusable="false">
+        <use href="#planta" transform="translate(548 760) rotate(-9) scale(.7) translate(-548 -760)"/>
+      </svg>
+    </div>
+
+    <div class="hero__in">
+      <!-- EDITABLE: titular principal -->
+      <h1 id="t-hero"><span>Puedes venir</span><span>como estás.</span></h1>
+
+      <div class="hero__row">
+        <div></div>
+        <div class="hero__txt">
+          <!-- EDITABLE: texto de presentación -->
+          <p>Soy Claudia Pubill, psicóloga. Atiendo a niños, adolescentes, familias, parejas y adultos, online o presencial. Mira lo que ofrezco y escríbeme cuando quieras.</p>
+          <div class="hero__acts">
+            <button class="pill pill--olive cta" type="button" data-sx-go="quien">
+              Conóceme
+              <span class="cta__ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+            </button>
+            <a class="quiet" href="#servicios" data-sx-go="terapias">Ver las terapias</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ DUDAS (bloque compartido, con una ventana de adorno) ═════════ -->
+  <div class="doubts" data-sx-anchor="dudas">
+    <div class="doubts__in">
+      <figure class="photo photo--win" aria-hidden="true">
+        <svg viewBox="0 0 600 760" preserveAspectRatio="xMaxYMax slice" focusable="false"><use href="#planta" transform="translate(40 -40) scale(1.1)"/></svg>
+      </figure>
+      <div data-sx="doubts"></div>
+    </div>
+  </div>
+
+  <!-- ═════════ QUIÉN SOY ═════════ -->
+  <section class="sec" id="quien-soy" data-sx-anchor="quien" aria-labelledby="t-quien">
+    <div class="wrap">
+      <div class="head head--label"><h2 id="t-quien">Quién soy</h2></div>
+      <div class="about">
+        <!-- EDITABLE: texto de "Quién soy" -->
+        <p class="about__lead">Soy curiosa y reflexiva, y sé escuchar. Me motiva el cambio, y respeto la historia de cada persona tal como viene, sin juzgarla.</p>
+
+        <!-- EDITABLE: aquí irá la foto (cambiar el <figure> por <img src="foto.jpg" alt="Claudia Pubill">) -->
+        <figure class="photo">
+          <svg viewBox="0 0 600 760" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" focusable="false"><use href="#planta" transform="translate(40 -40) scale(1.1)"/></svg>
+          <figcaption>Aquí irá la foto de Claudia</figcaption>
+        </figure>
+
+        <div class="about__rest">
+          <p>Soy cercana sin dejar de ser profesional, y respeto los límites que pone cada uno.</p>
+          <p>Atiendo a niños, adolescentes, familias, parejas y adultos desde una perspectiva psicológica integradora, que intenta adaptarse a las necesidades de quien tengo delante. Trabajo en equipos multidisciplinares y llevo mis casos a supervisión, lo que me ayuda a entender mejor a cada persona y a mí misma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ QUÉ OFREZCO ═════════ -->
+  <section class="sec services" id="servicios" data-sx-anchor="terapias" aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="head"><h2 id="t-serv">Qué ofrezco</h2></div>
+      <div class="rail" tabindex="0" role="region" aria-label="Servicios (desliza para ver más)">
+        <!-- EDITABLE: servicios. Para cambiar el servicio que se preselecciona al reservar: data-service -->
+        <ul class="arches">
+          <li class="arch">
+            <h3>Terapia individual</h3>
+            <p>Sesiones solo para ti, para entender qué te pasa y qué quieres cambiar.</p>
+            <button type="button" data-info="individual">En qué consiste<span class="sr"> la terapia individual</span></button>
+          </li>
+          <li class="arch">
+            <h3>Terapia de pareja</h3>
+            <p>Aprender a escucharos otra vez, sin ganar ni perder.</p>
+            <button type="button" data-info="pareja">En qué consiste<span class="sr"> la terapia de pareja</span></button>
+          </li>
+          <li class="arch">
+            <h3>Terapia familiar</h3>
+            <p>Cuando lo que pasa en casa os afecta a todos y conviene hablarlo juntos.</p>
+            <button type="button" data-info="familiar">En qué consiste<span class="sr"> la terapia familiar</span></button>
+          </li>
+          <li class="arch">
+            <h3>Terapia infantojuvenil</h3>
+            <p>Para niños y adolescentes que lo están pasando mal, con la familia cerca.</p>
+            <button type="button" data-info="infantojuvenil">En qué consiste<span class="sr"> la terapia infantojuvenil</span></button>
+          </li>
+          <li class="arch">
+            <h3>Neuroevaluación</h3>
+            <p>Entender cómo aprende una persona cuando algo le cuesta y no se sabe por qué.</p>
+            <button type="button" data-info="neuroevaluacion">En qué consiste<span class="sr"> la neuroevaluación</span></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ CÓMO TRABAJO (puntos diferenciales) ═════════ -->
+  <section class="sec" id="como-trabajo" data-sx-anchor="como" aria-labelledby="t-dif">
+    <div class="wrap">
+      <div class="head"><h2 id="t-dif">Cómo trabajo</h2></div>
+      <!-- EDITABLE: puntos diferenciales -->
+      <ul class="dif">
+        <li><h3>Atención individualizada</h3><p>Cada persona llega con su historia. Lo que hacemos en terapia lo decidimos juntos y lo vamos ajustando.</p></li>
+        <li><h3>Terapia integradora</h3><p>Combino enfoques según lo que necesites en cada momento.</p></li>
+        <li><h3>Supervisión de casos</h3><p>Comento mis casos con un equipo terapéutico; otras miradas ven lo que a mí se me escapa.</p></li>
+        <li><h3>Formación constante</h3><p>Sigo formándome para no quedarme con lo que ya sé.</p></li>
+        <li><h3>Estudio y práctica</h3><p>Formación académica y práctica clínica en equipos multidisciplinares.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═════════ CON QUIÉN TRABAJO, DÓNDE NOS VEMOS, PREGUNTAS, BLOG, PODCAST (bloques compartidos) ═════════ -->
+  <div data-sx="proof"></div>
+  <div data-sx="places"></div>
+  <div data-sx="faq"></div>
+  <div data-sx="blog"></div>
+  <div data-sx="podcast"></div>
+
+  <!-- ═════════ PRIMERA SESIÓN (sin compromiso) ═════════ -->
+  <section class="sec book" id="reserva" aria-labelledby="t-book">
+    <div class="wrap">
+      <h2 id="t-book">Pedir una primera sesión.</h2>
+      <div>
+        <!-- EDITABLE: texto de la franja final -->
+        <p>La primera sesión es para conocernos. Me cuentas lo que quieras y después decides si seguimos. Puede ser online o presencial.</p>
+        <div class="book__btns">
+          <button class="pill pill--bone" type="button" data-book data-book-mode="online">Online</button>
+          <button class="pill pill--ghost" type="button" data-book data-book-mode="presencial">Presencial</button>
+        </div>
+        <a class="book__alt" href="#sx-contacto" data-sx-go="contacto">Si prefieres, escríbeme antes.</a>
+      </div>
+    </div>
+  </section>
+
+  <div data-sx="contact"></div>
+</main>
+
+<!-- Pie compartido: datos legales, contacto y aviso de urgencias (los datos entre corchetes los pone Claudia) -->
+<div data-sx="footer"></div>
+
+<!-- EDITABLE: número de WhatsApp (con prefijo de país, sin +) y enlace de Cal.com cuando exista -->
+<script>window.CLAUDIA={whatsapp:'34600000000',calLink:''}</script>
+<script src="shared/services.js" defer></script>
+<script src="shared/sections.js" defer></script>
+<script src="shared/booking.js" defer></script>
+<script src="shared/switcher.js" defer></script>
+<script>
+/* Pausa el balanceo de las hojas cuando el hero no se ve (ahorra batería). */
+(() => {
+  const hero = document.querySelector('.hero');
+  const plant = document.querySelector('.plant');
+  if (!hero || !plant || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(([e]) => {
+    plant.style.animationPlayState = e.isIntersecting ? 'running' : 'paused';
+  }).observe(hero);
+})();
+</script>
+</body>
+</html>

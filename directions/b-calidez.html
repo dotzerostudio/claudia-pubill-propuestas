@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FAF6FB">
+<title>Claudia Pubill · Psicóloga · Propuesta B, Calidez</title>
+<meta name="description" content="Psicóloga para niños, adolescentes, familias, parejas y adultos. Terapia online y presencial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/booking.css">
+<link rel="stylesheet" href="shared/sections.css">
+<style>
+  /* ============================================================
+     COLORES Y TIPOGRAFÍA — aquí se cambia la paleta de toda la web
+     ============================================================ */
+  :root{
+    --ink:#2E2140;          /* ciruela: texto y fondos oscuros */
+    --paper:#FAF6FB;        /* fondo de la página */
+    --paper-2:#F1EAF4;      /* fondo alterno de algunas secciones */
+    --muted:#5B4C6E;        /* texto secundario */
+    /* tonos por público (también se usan en etiquetas y tarjetas) */
+    --butter:#F7D26A;       /* niños */
+    --coral:#F58F7C;        /* adolescentes */
+    --sky:#9EC9EB;          /* familias */
+    --rose:#E8A9CB;         /* parejas */
+    --mint:#A8D3B0;         /* adultos */
+    --display:'Young Serif',Georgia,'Times New Roman',serif;
+    --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+
+    --edge:clamp(.75rem,2vw,1.5rem);        /* margen de los bloques de color */
+    --pad:clamp(1.25rem,4.5vw,4.5rem);      /* relleno interior de los bloques */
+    --gutter:clamp(1.1rem,4.5vw,4rem);      /* margen lateral de las secciones */
+    --rad-xl:clamp(28px,4vw,56px);
+
+    /* ventana de reserva (shared/booking.css) */
+    --bk-bg:#FAF6FB; --bk-ink:#2E2140; --bk-muted:#5B4C6E; --bk-line:rgba(46,33,64,.16);
+    --bk-accent:#F7D26A; --bk-accent-ink:#2E2140; --bk-radius:26px;
+    --bk-display:'Young Serif',Georgia,serif; --bk-display-weight:400; --bk-body:'Figtree',system-ui,sans-serif;
+
+    /* bloques compartidos (shared/sections.css): se visten con la misma paleta */
+    --sx-ink:#2E2140; --sx-muted:#5B4C6E; --sx-line:rgba(46,33,64,.16);
+    --sx-accent:#2E2140; --sx-accent-ink:#FAF6FB;
+    --sx-alt:#F1EAF4; --sx-card:#fff; --sx-radius:28px; --sx-btn-radius:999px;
+    --sx-display:'Young Serif',Georgia,serif; --sx-display-weight:400; --sx-body:'Figtree',system-ui,sans-serif;
+    --sx-max:calc(72rem + 2*var(--gutter)); --sx-gutter:var(--gutter);
+    --sx-foot-bg:#2E2140; --sx-foot-ink:#FAF6FB;
+    /* el color del público elegido en el hero tiñe también el bloque de dudas */
+    --tone-page:#F7D26A;
+
+    /* ——— imágenes decorativas (solo formas, sin fotos): huecos de foto, adornos e iconos ——— */
+    --g-doubts:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 300'%3E%3Ccircle cx='238' cy='140' r='118' fill='%23fff' fill-opacity='.42'/%3E%3Ccircle cx='238' cy='140' r='70' fill='none' stroke='%23fff' stroke-opacity='.9' stroke-width='6'/%3E%3Ccircle cx='312' cy='262' r='22' fill='%23fff' fill-opacity='.5'/%3E%3Cpath transform='translate(14 214) scale(1.6)' d='M4 26C16 6 26 40 40 22S64 8 78 24 102 40 116 20 130 14 136 22' fill='none' stroke='%232E2140' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='326' cy='40' r='14' fill='%232E2140'/%3E%3C/svg%3E");
+    --g-faq:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Ccircle cx='150' cy='112' r='92' fill='%23F7D26A'/%3E%3Ccircle cx='92' cy='176' r='50' fill='none' stroke='%23F58F7C' stroke-width='14'/%3E%3Ccircle cx='214' cy='208' r='28' fill='%239EC9EB'/%3E%3Cpath transform='translate(8 226) scale(1.2)' d='M4 26C16 6 26 40 40 22S64 8 78 24 102 40 116 20 130 14 136 22' fill='none' stroke='%232E2140' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='36' cy='40' r='12' fill='%232E2140'/%3E%3C/svg%3E");
+    --g-office:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Ccircle cx='70' cy='170' r='86' fill='%23fff' fill-opacity='.3'/%3E%3Cpath d='M196 190V92a40 40 0 0 1 80 0v98z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath d='M236 52v138M196 118h80' fill='none' stroke='%23fff' stroke-opacity='.85' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M44 200c0-38 18-58 44-76' fill='none' stroke='%23fff' stroke-opacity='.85' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='98' cy='114' rx='12' ry='22' transform='rotate(35 98 114)' fill='%23fff' fill-opacity='.6'/%3E%3Ccircle cx='150' cy='46' r='9' fill='%232E2140'/%3E%3C/svg%3E");
+    --g-online:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Ccircle cx='262' cy='40' r='56' fill='%23fff' fill-opacity='.3'/%3E%3Crect x='64' y='36' width='192' height='122' rx='22' fill='%23fff' fill-opacity='.42'/%3E%3Ccircle cx='160' cy='86' r='20' fill='%23fff' fill-opacity='.7'/%3E%3Cpath d='M122 132c6-18 20-26 38-26s32 8 38 26z' fill='%23fff' fill-opacity='.7'/%3E%3Cpath d='M126 182h68' fill='none' stroke='%23fff' stroke-opacity='.85' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='38' cy='150' r='11' fill='%232E2140'/%3E%3C/svg%3E");
+    --g-b1:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect x='34' y='30' width='150' height='80' rx='36' fill='%23fff' fill-opacity='.4'/%3E%3Cpath d='M62 108l-8 26 30-20z' fill='%23fff' fill-opacity='.4'/%3E%3Crect x='140' y='94' width='146' height='74' rx='34' fill='%23fff' fill-opacity='.62'/%3E%3Cpath d='M262 166l8 22-28-16z' fill='%23fff' fill-opacity='.62'/%3E%3Cpath d='M68 70h78M172 131h84' fill='none' stroke='%232E2140' stroke-opacity='.55' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+    --g-b2:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Ccircle cx='128' cy='100' r='64' fill='%23fff' fill-opacity='.4'/%3E%3Ccircle cx='192' cy='100' r='64' fill='%23fff' fill-opacity='.4'/%3E%3Cpath d='M160 44.6A64 64 0 0 1 160 155.4A64 64 0 0 1 160 44.6Z' fill='%23fff' fill-opacity='.5'/%3E%3Ccircle cx='282' cy='36' r='10' fill='%232E2140'/%3E%3Ccircle cx='36' cy='168' r='16' fill='%23fff' fill-opacity='.5'/%3E%3C/svg%3E");
+    --g-b3:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Cpath d='M60 176a100 100 0 0 1 200 0' fill='none' stroke='%23fff' stroke-opacity='.85' stroke-width='14' stroke-linecap='round'/%3E%3Cpath d='M90 176a70 70 0 0 1 140 0' fill='none' stroke='%23fff' stroke-opacity='.6' stroke-width='14' stroke-linecap='round'/%3E%3Cpath d='M120 176a40 40 0 0 1 80 0' fill='none' stroke='%23fff' stroke-opacity='.38' stroke-width='14' stroke-linecap='round'/%3E%3Ccircle cx='44' cy='50' r='22' fill='%23fff' fill-opacity='.4'/%3E%3Ccircle cx='278' cy='40' r='10' fill='%232E2140'/%3E%3C/svg%3E");
+    --g-pod:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Ccircle cx='150' cy='150' r='140' fill='%23fff' fill-opacity='.22'/%3E%3Ccircle cx='150' cy='150' r='100' fill='%23fff' fill-opacity='.28'/%3E%3Ccircle cx='150' cy='150' r='60' fill='%23fff' fill-opacity='.5'/%3E%3Cg fill='%232E2140'%3E%3Crect x='100' y='132' width='12' height='36' rx='6'/%3E%3Crect x='124' y='114' width='12' height='72' rx='6'/%3E%3Crect x='148' y='98' width='12' height='104' rx='6'/%3E%3Crect x='172' y='118' width='12' height='64' rx='6'/%3E%3Crect x='196' y='135' width='12' height='30' rx='6'/%3E%3C/g%3E%3C/svg%3E");
+    --g-ic-link:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%232E2140' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='12' r='5.5'/%3E%3Ccircle cx='15' cy='12' r='5.5'/%3E%3C/g%3E%3C/svg%3E");
+    --g-ic-team:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%232E2140' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='8.5' cy='8.5' r='3'/%3E%3Ccircle cx='16.5' cy='9.5' r='2.4'/%3E%3Cpath d='M3 19c0-3.2 2.4-5.2 5.5-5.2S14 15.8 14 19M15.5 14.4c3 0 5.5 1.7 5.5 4.6'/%3E%3C/g%3E%3C/svg%3E");
+    --g-ic-check:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%232E2140' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l7 3v5.2c0 4.6-3 8-7 9.8-4-1.8-7-5.2-7-9.8V6z'/%3E%3Cpath d='M8.8 12.2l2.3 2.3 4.2-4.7'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  /* --tone es el color del bloque principal; al registrarla se anima suave al cambiar */
+  @property --tone{syntax:'<color>';inherits:true;initial-value:#F7D26A}
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+  h1,h2,h3,p,ul,figure{margin:0}
+  ul{padding:0;list-style:none}
+  a{color:inherit}
+  button{font-family:inherit}
+  svg{display:block}
+  :focus-visible{outline:3px solid var(--ring,var(--ink));outline-offset:3px}
+  .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .skip{position:absolute;left:1rem;top:-4rem;z-index:60;padding:.7rem 1rem;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none}
+  .skip:focus{top:1rem}
+  section[id]{scroll-margin-top:1rem}
+
+  /* ——— botones ——— */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:0 1.55rem;border:0;border-radius:999px;font:700 1.05rem/1 var(--body);text-decoration:none;cursor:pointer;transition:background-color .2s,transform .2s}
+  .btn svg{width:1.15rem;height:1.15rem;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+  .btn--plum{background:var(--ink);color:var(--paper)}
+  .btn--plum:hover{background:#45335F}
+  .btn:hover svg{transform:translateX(3px)}
+  .btn--sm{min-height:44px;padding:0 1.15rem;font-size:.95rem}
+
+  /* ——— cabecera ——— */
+  .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:calc(92rem + 2*var(--edge));margin:0 auto;padding:1rem calc(var(--edge) + var(--pad))}
+  .brand{font:400 1.3rem/1 var(--display);text-decoration:none;white-space:nowrap}
+  .top nav{display:none}
+  .top nav ul{display:flex;gap:1.9rem;font-weight:600;font-size:.98rem}
+  .top nav a{text-decoration:none;padding:.5rem 0;background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .25s}
+  .top nav a:hover{background-size:100% 2px}
+  @media (min-width:860px){.top nav{display:block}}
+
+  /* ============================================================
+     HERO — el bloque de color cambia con el público elegido
+     ============================================================ */
+  .hero{--tone:#F7D26A;position:relative;overflow:hidden;width:min(100% - 2*var(--edge),92rem);margin:0 auto;padding:clamp(1.75rem,5vw,4.5rem) var(--pad);
+    background:var(--tone);border-radius:var(--rad-xl);transition:--tone .5s ease;
+    display:grid;gap:2.2rem;align-items:center;min-height:clamp(30rem,calc(100svh - 8rem),50rem)}
+  @media (min-width:900px){.hero{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:3rem}}
+  .hero h1{font:400 clamp(2.45rem,5.6vw,5rem)/1.03 var(--display);letter-spacing:-.012em;text-wrap:balance;margin-bottom:clamp(1.4rem,3vw,2.2rem)}
+
+  /* selector de público: radios nativos (las flechas del teclado funcionan) */
+  .who{border:0;margin:0 0 1.5rem;padding:0;min-width:0}
+  .who legend{padding:0;margin-bottom:.8rem;font:700 1.12rem/1.3 var(--body)}
+  .who__pills{display:flex;flex-wrap:wrap;gap:.55rem}
+  .who__pill{position:relative}
+  .who__pill input{position:absolute;width:1px;height:1px;margin:0;opacity:0;overflow:hidden;clip:rect(0 0 0 0)}
+  .who__pill span{display:inline-flex;align-items:center;min-height:48px;padding:0 1.2rem;border:2px solid var(--ink);border-radius:999px;font:600 1.02rem/1 var(--body);cursor:pointer;transition:background-color .2s,color .2s,transform .2s}
+  .who__pill:hover span{background:rgba(255,255,255,.5)}
+  .who__pill input:checked + span{background:var(--ink);color:#fff}
+  .who__pill input:checked + span:hover{background:var(--ink)}
+  .who__pill input:focus-visible + span{outline:3px solid var(--ink);outline-offset:3px}
+
+  /* frase que cambia con el público (fundido cruzado) */
+  .lead{display:grid;max-width:34rem;margin-bottom:clamp(1.5rem,3vw,2.1rem);font:500 clamp(1.12rem,1.6vw,1.32rem)/1.45 var(--body);text-wrap:pretty}
+  .lead p{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .3s,transform .3s,visibility 0s .3s}
+  .lead p.is-on{opacity:1;visibility:visible;transform:none;transition:opacity .5s .15s,transform .5s .15s,visibility 0s}
+
+  /* retrato en forma orgánica + adornos */
+  .art{position:relative;justify-self:center;width:min(78%,19rem)}
+  @media (min-width:900px){.art{width:min(100%,27rem)}}
+  .portrait{position:relative;aspect-ratio:4/5;clip-path:url(#blob);background:color-mix(in srgb,var(--tone),#fff 55%)}
+  .portrait .sil{position:absolute;left:9%;bottom:0;width:82%;height:auto;fill:var(--tone)}
+  .portrait__label,.frame__label{position:absolute;left:50%;transform:translateX(-50%);padding:.5rem 1rem;border-radius:999px;background:var(--paper);color:var(--ink);font:600 .95rem/1.2 var(--body);white-space:nowrap}
+  .portrait__label{bottom:12%}
+  .decor{position:absolute;pointer-events:none}
+  .decor--squig{left:-9%;top:3%;width:46%;height:auto;fill:none;stroke:var(--ink);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round}
+  .decor--dot{right:1%;bottom:7%;width:3rem;height:3rem}
+  .decor--ring{left:-2%;bottom:14%;width:5rem;height:5rem;fill:none;stroke:#fff;stroke-width:5}
+  .decor--dot circle{fill:var(--ink)}
+  @media (prefers-reduced-motion:no-preference){
+    .decor--dot,.decor--ring{animation:bob 7s ease-in-out infinite}
+    .decor--ring{animation-delay:-3.2s}
+    @keyframes bob{50%{transform:translateY(-9px)}}
+  }
+  @media (max-width:520px){.hero .btn{width:100%}}
+
+  /* ——— secciones ——— */
+  .sec{padding:clamp(4rem,9vw,7.5rem) var(--gutter)}
+  .wrap{width:min(100%,72rem);margin:0 auto}
+  .sec-head{max-width:40rem;margin-bottom:clamp(1.8rem,4vw,3rem)}
+  h2{font:400 clamp(2rem,4.6vw,3.5rem)/1.06 var(--display);letter-spacing:-.01em;text-wrap:balance}
+  .sec-head p{margin-top:.9rem;color:var(--muted);font-size:1.1rem}
+
+  /* ——— quién soy ——— */
+  .about .wrap{display:grid;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+  @media (min-width:860px){.about .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}}
+  .photo{position:relative;justify-self:center;width:min(80%,22rem);padding:.5rem 0 1.2rem}
+  .photo::before{content:"";position:absolute;inset:7% -9% -4% 13%;background:var(--sky);border-radius:44px 44px 44px 120px;transform:rotate(5deg)}
+  .frame{position:relative;aspect-ratio:4/5;overflow:hidden;border:2.5px dashed rgba(46,33,64,.55);border-radius:34px;background:#FFFDFA;transform:rotate(-3deg)}
+  .frame .sil{position:absolute;left:12%;bottom:0;width:76%;height:auto;fill:var(--butter)}
+  .frame__label{bottom:9%}
+  .about h2{margin-bottom:1.3rem}
+  .about__lead{font-size:clamp(1.15rem,1.7vw,1.35rem);line-height:1.5;font-weight:500;margin-bottom:1.1rem;text-wrap:pretty}
+  .about p+p{margin-top:1rem;max-width:36rem;text-wrap:pretty}
+  .stickers{display:flex;flex-wrap:wrap;gap:.8rem .6rem;margin-top:1.9rem}
+  .stickers li{padding:.55rem 1.05rem;border:2px solid var(--ink);border-radius:999px;background:var(--c);font:700 1rem/1.2 var(--body);transform:rotate(var(--r));transition:transform .25s}
+  .stickers li:hover{transform:rotate(0)}
+
+  /* ——— qué ofrezco: bento ——— */
+  .offer{background:var(--paper-2);--gap:var(--paper-2)}
+  .bento{display:grid;gap:clamp(.8rem,1.6vw,1.1rem);grid-template-columns:1fr;padding:8px 0 0}
+  .tile{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;min-height:15.5rem;
+    padding:clamp(1.3rem,2.4vw,1.9rem);background:var(--c);border-radius:var(--r);
+    transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+  .tile h3{font:400 clamp(1.4rem,1.9vw,1.65rem)/1.12 var(--display);hyphens:auto;overflow-wrap:break-word}
+  .tile p{margin-top:.55rem;max-width:30ch}
+  .tile .pill{align-self:flex-start}
+  .tile.is-match{transform:translateY(-6px);box-shadow:0 0 0 3px var(--gap),0 0 0 6px var(--ink)}
+  .deco{position:absolute;z-index:-1;pointer-events:none;fill:#fff;fill-opacity:.3}
+  .deco--line{fill:none;stroke:#fff;stroke-opacity:.75;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+  .pill{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1.15rem;border:0;border-radius:999px;background:var(--ink);color:var(--paper);font:700 .98rem/1 var(--body);cursor:pointer;transition:background-color .2s}
+  .pill svg{width:1.05rem;height:1.05rem;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+  .pill:hover{background:#45335F}
+  .pill:hover svg{transform:translateX(3px)}
+  .tile--ind{--c:var(--mint);--r:48px 48px 48px 16px;grid-area:ind;min-height:19rem}
+  .tile--par{--c:var(--rose);--r:32px 32px 12px 32px;grid-area:par}
+  .tile--fam{--c:var(--sky);--r:20px 56px 20px 20px;grid-area:fam}
+  .tile--inf{--c:var(--butter);--r:56px 20px 20px 20px;grid-area:inf}
+  .tile--neu{--c:var(--coral);--r:24px 24px 24px 56px;grid-area:neu}
+  .tile--ind h3{font-size:clamp(1.9rem,3.6vw,3.1rem);line-height:1.05;max-width:11ch}
+  .tile--ind p{font-size:1.15rem;max-width:26ch;margin-top:.9rem}
+  .tile--ind .deco{right:-60px;bottom:-60px;width:300px;height:300px}
+  .tile--par .deco{right:.9rem;bottom:.9rem;width:7.5rem;height:auto}
+  .tile--fam .deco{right:.9rem;bottom:.9rem;width:5rem;height:auto}
+  .tile--inf .deco{right:.8rem;bottom:.9rem;width:5.5rem;height:auto}
+  .tile--neu .deco{right:7.5rem;top:50%;width:min(16rem,40%);height:auto;transform:translateY(-50%)}
+  .bento{grid-template-areas:"ind" "par" "fam" "inf" "neu"}
+  @media (min-width:560px){.bento{grid-template-columns:repeat(2,1fr);grid-template-areas:"ind ind" "par fam" "inf neu"}}
+  @media (min-width:1060px){
+    .bento{grid-template-columns:repeat(4,1fr);grid-template-rows:minmax(15.5rem,auto) minmax(15.5rem,auto) auto;grid-template-areas:"ind ind par par" "ind ind fam inf" "neu neu neu neu"}
+    .tile--neu{min-height:0;flex-direction:row;align-items:center}
+    .tile--neu .pill{align-self:center}
+  }
+
+  /* ——— cómo trabajo ——— */
+  .why{display:grid;gap:2.4rem 2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr))}
+  @media (min-width:760px){.why{grid-template-columns:repeat(3,1fr)}}
+  @media (min-width:1180px){.why{grid-template-columns:repeat(5,1fr)}}
+  .why__ic{display:grid;place-items:center;width:3.75rem;height:3.75rem;margin-bottom:1.1rem;border-radius:50%;background:var(--c);transform:rotate(var(--r,0deg))}
+  .why__ic svg{width:1.9rem;height:1.9rem;fill:none;stroke:var(--ink);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+  .why h3{font:400 1.32rem/1.15 var(--display);margin-bottom:.5rem;text-wrap:balance}
+  .why p{color:var(--muted);text-wrap:pretty}
+
+  /* ——— reserva ——— */
+  .band{--ring:var(--butter);position:relative;overflow:hidden;width:min(100% - 2*var(--edge),92rem);margin:0 auto;padding:clamp(3rem,8vw,6.5rem) var(--pad);
+    background:var(--ink);color:var(--paper);border-radius:var(--rad-xl)}
+  .band h2{max-width:15ch;color:var(--butter);font-size:clamp(2.3rem,6vw,5rem);line-height:1.04}
+  .band p{margin-top:1.1rem;max-width:30rem;font-size:1.15rem;color:rgba(250,246,251,.88)}
+  .band__btns{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:clamp(1.8rem,4vw,2.8rem)}
+  .big{flex:1 1 14rem;max-width:21rem;display:inline-flex;align-items:center;justify-content:center;gap:.75rem;min-height:68px;padding:0 2rem;border:0;border-radius:999px;color:var(--ink);font:700 1.3rem/1 var(--body);cursor:pointer;transition:transform .2s,filter .2s}
+  .big svg{width:1.5rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .big:hover{transform:translateY(-3px) rotate(-.6deg);filter:brightness(1.05)}
+  .big--online{background:var(--sky)}
+  .big--pres{background:var(--rose)}
+  .band .d1,.band .d2{position:absolute;border-radius:50%;pointer-events:none}
+  .band .d1{right:-5rem;top:-5rem;width:20rem;height:20rem;background:rgba(250,246,251,.07)}
+  .band .d2{right:9%;bottom:-3rem;width:9rem;height:9rem;border:14px solid rgba(247,210,106,.22)}
+  .band > *:not(.d1):not(.d2){position:relative}
+  .band p.band__ask{margin-top:1.5rem;max-width:none;font-size:1rem;color:rgba(250,246,251,.82)}
+  .band__ask a{color:var(--paper);text-underline-offset:.22em;text-decoration-thickness:2px}
+  .band__ask a:hover{color:var(--butter)}
+
+  /* ============================================================
+     BLOQUES COMPARTIDOS (shared/sections.js) — ajustes para que parezcan de esta propuesta.
+     Las variables --sx-* están arriba, con la paleta. Son más tranquilos que el hero: colores suaves y poco adorno.
+     ============================================================ */
+  .sx__in{padding-block:clamp(3.5rem,8vw,6.5rem)}
+  .sx__h{font-size:clamp(1.9rem,4vw,3rem);line-height:1.08}
+  .sx__btn{min-height:52px;padding:0 1.55rem;font-weight:700;font-size:1.05rem;transition:background-color .2s}
+  .sx__btn:hover{filter:none;background:#45335F}
+  .sx__link{text-decoration-thickness:2px}
+  .sx__tag{border-color:var(--sx-line)}
+
+  /* dudas: bloque de color suave que toma el tono del público elegido en el hero */
+  .sx--doubts{position:relative;overflow:hidden;isolation:isolate;width:min(100% - 2*var(--edge),92rem);margin:clamp(.9rem,1.6vw,1.25rem) auto 0;
+    background-color:color-mix(in srgb,var(--tone-page),#fff 62%);border-radius:var(--rad-xl);transition:background-color .5s ease}
+  .sx--doubts .sx__in{max-width:none;padding-inline:var(--pad);padding-bottom:clamp(9rem,24vw,10.5rem)}
+  .sx--doubts::after{content:"";position:absolute;z-index:-1;right:-1rem;bottom:.4rem;width:14rem;height:11.7rem;background:var(--g-doubts) center/contain no-repeat;pointer-events:none}
+  @media (min-width:1180px){
+    .sx--doubts .sx__in{padding-block:clamp(4.5rem,7vw,6.5rem)}
+    .sx--doubts::after{right:3%;top:50%;bottom:auto;width:23rem;height:19.2rem;transform:translateY(-50%)}
+  }
+
+  /* con quién trabajo: tres tarjetas de color suave con una insignia */
+  .sx--proof .sx__card{border:0;padding:clamp(1.4rem,2.6vw,2rem);background:color-mix(in srgb,var(--c),#fff 62%)}
+  .sx--proof .sx__card::before{content:"";flex:none;width:3.6rem;height:3.6rem;margin-bottom:.7rem;border-radius:50%;background:var(--c) var(--ic) center/62% no-repeat;transform:rotate(var(--r))}
+  .sx--proof .sx__card:nth-child(1){--c:var(--butter);--ic:var(--g-ic-link);--r:-5deg;border-radius:44px 44px 44px 14px}
+  .sx--proof .sx__card:nth-child(2){--c:var(--sky);--ic:var(--g-ic-team);--r:4deg;border-radius:14px 44px 44px 44px}
+  .sx--proof .sx__card:nth-child(3){--c:var(--rose);--ic:var(--g-ic-check);--r:-3deg;border-radius:44px 14px 44px 44px}
+  .sx--proof .sx__card h3{font-size:1.4rem}
+
+  /* huecos de foto: bloques de color con formas; la etiqueta dice qué foto falta */
+  .sx-ph{--c:var(--butter);align-items:flex-end;justify-content:flex-start;border-bottom:0;
+    background:var(--g,none) center/cover no-repeat,var(--c);outline:2px dashed rgba(46,33,64,.28);outline-offset:-.65rem}
+  .sx-ph figcaption{padding:.35rem .85rem;border-radius:999px;background:var(--paper);color:var(--ink);font:600 .85rem/1.2 var(--body)}
+  .sx--places .sx__card:nth-child(1) .sx-ph{--g:var(--g-office);--c:var(--mint)}
+  .sx--places .sx__card:nth-child(2) .sx-ph{--g:var(--g-online);--c:var(--sky)}
+  .sx--places .sx__card:nth-child(1){border-radius:40px 40px 40px 14px}
+  .sx--places .sx__card:nth-child(2){border-radius:40px 14px 40px 40px}
+  .sx--blog .sx__card{border-radius:36px}
+  .sx--blog .sx__card:nth-child(1) .sx-ph{--g:var(--g-b1);--c:var(--coral)}
+  .sx--blog .sx__card:nth-child(2) .sx-ph{--g:var(--g-b2);--c:var(--rose)}
+  .sx--blog .sx__card:nth-child(3) .sx-ph{--g:var(--g-b3);--c:var(--butter)}
+  .sx--places .sx__card h3,.sx--blog .sx__card h3{font-size:1.35rem}
+  .sx--podcast .sx-ph{--g:var(--g-pod);--c:var(--mint);width:min(100%,24rem);border:0;border-radius:48px 48px 48px 14px;outline-offset:-.8rem}
+
+  /* preguntas: el signo + va dentro de un círculo de color */
+  .sx--faq .sx__in{position:relative}
+  .sx__q summary{align-items:center;font-size:1.1rem}
+  .sx__q summary::after{display:grid;place-items:center;width:2.2rem;height:2.2rem;padding-bottom:.12rem;border-radius:50%;background:var(--c,var(--butter));font-size:1.4rem}
+  .sx__q:nth-child(5n+1){--c:var(--butter)}
+  .sx__q:nth-child(5n+2){--c:var(--coral)}
+  .sx__q:nth-child(5n+3){--c:var(--sky)}
+  .sx__q:nth-child(5n+4){--c:var(--rose)}
+  .sx__q:nth-child(5n+5){--c:var(--mint)}
+  @media (min-width:1240px){
+    .sx--faq .sx__in::after{content:"";position:absolute;right:var(--sx-gutter);top:clamp(3.5rem,8vw,6.5rem);width:16rem;height:16rem;background:var(--g-faq) center/contain no-repeat;pointer-events:none}
+  }
+
+  /* podcast */
+  .sx--podcast .sx__lead{max-width:34rem}
+
+  /* contacto: tres teselas de color suave */
+  .sx--contact .sx__citem{height:100%;padding:1.2rem 1.4rem;border-radius:var(--sx-radius);background:color-mix(in srgb,var(--c),#fff 68%);transition:transform .25s}
+  .sx--contact a.sx__citem:hover{transform:translateY(-3px)}
+  .sx--contact li:nth-child(1){--c:var(--butter);--r:-4deg}
+  .sx--contact li:nth-child(2){--c:var(--sky);--r:3deg}
+  .sx--contact li:nth-child(3){--c:var(--mint);--r:-2deg}
+  .sx__ico{width:3.4rem;height:3.4rem;border:2px solid var(--ink);background:var(--c);transform:rotate(var(--r))}
+  .sx__ico svg{stroke-width:1.9}
+  .sx__ctext strong{font-size:1.3rem}
+
+  /* pie: bloque ciruela que cierra la página */
+  .sx--footer{--sx-line:rgba(250,246,251,.22);--sx-accent:var(--butter);margin-top:1rem;border-top:0;border-radius:var(--rad-xl) var(--rad-xl) 0 0}
+  .sx--footer .sx__in{padding-top:clamp(2.8rem,6vw,4.5rem);padding-bottom:5.5rem}  /* el margen de abajo deja sitio a la barra de propuestas; se quita en la web final */
+  .sx__fname,.sx__fh{color:var(--butter)}
+  .sx__fh{font-size:.95rem}
+  .sx--footer a,.sx__flink{opacity:1}
+  @media (max-width:899px){   /* en móvil, las columnas del pie van de dos en dos para no alargar la página */
+    .sx__fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .sx__fbrand{grid-column:1/-1}
+  }
+
+  /* ——— botón flotante de WhatsApp (se esconde al llegar al pie para no taparlo) ——— */
+  .wa{--ring:var(--ink);position:fixed;right:clamp(.9rem,2vw,1.5rem);bottom:1.5rem;z-index:30;display:grid;place-items:center;width:58px;height:58px;padding:0;border:2.5px solid var(--ink);border-radius:50%;background:#25D366;color:var(--ink);cursor:pointer;text-decoration:none;box-shadow:0 10px 24px -8px rgba(46,33,64,.5);transition:transform .2s,opacity .25s,visibility 0s}
+  .wa:hover{transform:scale(1.07) rotate(-4deg)}
+  .wa.is-away{opacity:0;visibility:hidden;transform:translateY(12px);transition:transform .2s,opacity .25s,visibility 0s .25s}
+  .wa svg{width:30px;height:30px;fill:currentColor}
+  @media (max-width:760px){.wa{bottom:4.6rem}}   /* sube para no tapar la barra de propuestas */
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- Formas reutilizadas: la mancha del retrato (clipPath) y la silueta de la foto -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="blob" clipPathUnits="objectBoundingBox">
+      <path d="M0.530,0.015 C0.637,0.023 0.804,0.048 0.880,0.120 C0.956,0.193 0.982,0.337 0.985,0.450 C0.988,0.563 0.964,0.711 0.900,0.800 C0.836,0.889 0.707,0.960 0.600,0.985 C0.493,0.998 0.355,0.994 0.260,0.950 C0.165,0.906 0.063,0.822 0.030,0.720 C0.002,0.618 0.025,0.448 0.060,0.340 C0.095,0.232 0.162,0.124 0.240,0.070 C0.318,0.016 0.423,0.007 0.530,0.015 Z"/>
+    </clipPath>
+    <symbol id="sil" viewBox="0 0 100 110">
+      <circle cx="50" cy="36" r="20"/>
+      <path d="M6 110C6 78 26 62 50 62s44 16 44 48z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="top">
+  <a class="brand" href="#inicio">Claudia Pubill</a>
+  <nav aria-label="Principal">
+    <ul>
+      <li><a href="#quien-soy">Quién soy</a></li>
+      <li><a href="#que-ofrezco">Qué ofrezco</a></li>
+      <li><a href="#como-trabajo">Cómo trabajo</a></li>
+      <li><a href="#" data-sx-go="preguntas">Preguntas</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn--plum btn--sm nav-cta" href="#" data-sx-go="contacto">Escríbeme</a>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio" aria-labelledby="h-hero" style="--tone:#F7D26A">
+    <div class="hero__copy">
+      <h1 id="h-hero">Cuéntame qué te trae por aquí.</h1>
+
+      <!-- SELECTOR: cada opción lleva su color (data-tone) y el servicio al que apunta (data-service) -->
+      <fieldset class="who">
+        <legend>¿Para quién buscas terapia?</legend>
+        <div class="who__pills">
+          <label class="who__pill"><input type="radio" name="who" value="ninos" data-tone="#F7D26A" data-service="Terapia infantojuvenil" data-key="infantojuvenil" data-for="la terapia infantojuvenil" checked><span>Niños</span></label>
+          <label class="who__pill"><input type="radio" name="who" value="adolescentes" data-tone="#F58F7C" data-service="Terapia infantojuvenil" data-key="infantojuvenil" data-for="la terapia infantojuvenil"><span>Adolescentes</span></label>
+          <label class="who__pill"><input type="radio" name="who" value="familias" data-tone="#9EC9EB" data-service="Terapia familiar" data-key="familiar" data-for="la terapia familiar"><span>Familias</span></label>
+          <label class="who__pill"><input type="radio" name="who" value="parejas" data-tone="#E8A9CB" data-service="Terapia de pareja" data-key="pareja" data-for="la terapia de pareja"><span>Parejas</span></label>
+          <label class="who__pill"><input type="radio" name="who" value="adultos" data-tone="#A8D3B0" data-service="Terapia individual" data-key="individual" data-for="la terapia individual"><span>Adultos</span></label>
+        </div>
+      </fieldset>
+
+      <!-- FRASES: una por público (se pueden reescribir) -->
+      <div class="lead" aria-live="polite">
+        <p class="is-on" data-lead="ninos">Hablar, y jugar o dibujar si ayuda, con la familia cerca.</p>
+        <p data-lead="adolescentes">Un sitio propio para hablar de lo que les preocupa, sin que nadie los juzgue.</p>
+        <p data-lead="familias">Cuando lo que pasa afecta a todos, mirarlo juntos ayuda a entenderse.</p>
+        <p data-lead="parejas">Aprender a escucharos otra vez, sin ganar ni perder.</p>
+        <p data-lead="adultos">Para cuando algo no encaja desde hace tiempo y quieres entender qué es.</p>
+      </div>
+
+      <!-- El botón abre la ventana de la terapia que corresponde al público elegido (data-info lo cambia el script de abajo) -->
+      <button class="btn btn--plum" type="button" id="heroCta" data-info="infantojuvenil">
+        En qué consiste<span class="sr" id="heroCtaFor"> la terapia infantojuvenil</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+
+    <div class="art">
+      <div class="portrait">
+        <svg class="sil" viewBox="0 0 100 110" aria-hidden="true"><use href="#sil"/></svg>
+        <span class="portrait__label">Aquí irá la foto de Claudia</span>
+      </div>
+      <svg class="decor decor--squig" viewBox="0 0 140 44" aria-hidden="true"><path d="M4 26C16 6 26 40 40 22S64 8 78 24 102 40 116 20 130 14 136 22"/></svg>
+      <svg class="decor decor--ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42"/></svg>
+      <svg class="decor decor--dot" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
+    </div>
+  </section>
+
+  <!-- ============ DUDAS (bloque compartido) ============ -->
+  <div data-sx="doubts"></div>
+
+  <!-- ============ QUIÉN SOY ============ -->
+  <section class="sec about" id="quien-soy" data-sx-anchor="quien" aria-labelledby="h-quien">
+    <div class="wrap">
+      <div class="photo">
+        <div class="frame">
+          <svg class="sil" viewBox="0 0 100 110" aria-hidden="true"><use href="#sil"/></svg>
+          <span class="frame__label">Aquí irá la foto de Claudia</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 id="h-quien">Quién soy</h2>
+        <p class="about__lead">Soy curiosa y reflexiva, y sé escuchar. Me motiva el cambio, y respeto la historia de cada persona tal como viene, sin juzgarla. Soy cercana sin dejar de ser profesional, y respeto los límites que pone cada uno.</p>
+        <p>Atiendo a niños, adolescentes, familias, parejas y adultos desde una perspectiva psicológica integradora, que intenta adaptarse a las necesidades de quien tengo delante.</p>
+        <p>Trabajo en equipos multidisciplinares y llevo mis casos a supervisión, lo que me ayuda a entender mejor a cada persona y a mí misma.</p>
+
+        <ul class="stickers" aria-label="En pocas palabras">
+          <li style="--c:var(--butter);--r:-3deg">Curiosa</li>
+          <li style="--c:var(--sky);--r:2deg">Reflexiva</li>
+          <li style="--c:var(--rose);--r:-1.5deg">Escucha activa</li>
+          <li style="--c:var(--mint);--r:3deg">Cercana</li>
+          <li style="--c:var(--coral);--r:-2.5deg">Sin juicios</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUÉ OFREZCO ============ -->
+  <section class="sec offer" id="que-ofrezco" data-sx-anchor="terapias" aria-labelledby="h-ofrezco">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-ofrezco">Qué ofrezco</h2>
+        <p>Según quién venga, trabajo de una forma u otra. He marcado la que elegiste arriba, y puedes abrir cualquiera para leer cómo es.</p>
+      </div>
+
+      <!-- Cada tarjeta lleva data-tile con el nombre del servicio; así se ilumina con el selector del hero -->
+      <ul class="bento">
+        <li class="tile tile--ind" data-tile="Terapia individual">
+          <svg class="deco" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="100"/><circle cx="100" cy="100" r="62"/></svg>
+          <div>
+            <h3>Terapia individual</h3>
+            <p>Sesiones solo para ti, para entender qué te pasa y qué quieres cambiar.</p>
+          </div>
+          <button class="pill" type="button" data-info="individual">En qué consiste<span class="sr"> la terapia individual</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </li>
+
+        <li class="tile tile--par" data-tile="Terapia de pareja">
+          <svg class="deco" viewBox="0 0 150 80" aria-hidden="true"><circle cx="55" cy="40" r="36"/><circle cx="95" cy="40" r="36"/></svg>
+          <div>
+            <h3>Terapia de pareja</h3>
+            <p>Para cuando os cuesta hablar sin acabar discutiendo.</p>
+          </div>
+          <button class="pill" type="button" data-info="pareja">En qué consiste<span class="sr"> la terapia de pareja</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </li>
+
+        <li class="tile tile--fam" data-tile="Terapia familiar">
+          <svg class="deco" viewBox="0 0 100 70" aria-hidden="true"><circle cx="30" cy="42" r="26"/><circle cx="72" cy="30" r="16"/><circle cx="88" cy="60" r="9"/></svg>
+          <div>
+            <h3>Terapia familiar</h3>
+            <p>Cuando lo que pasa en casa os afecta a todos y conviene hablarlo juntos.</p>
+          </div>
+          <button class="pill" type="button" data-info="familiar">En qué consiste<span class="sr"> la terapia familiar</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </li>
+
+        <li class="tile tile--inf" data-tile="Terapia infantojuvenil">
+          <svg class="deco deco--line" viewBox="0 0 110 60" aria-hidden="true"><path d="M5 36C17 10 27 52 41 30S65 10 79 32 97 40 105 24"/></svg>
+          <div>
+            <h3>Terapia infantojuvenil</h3>
+            <p>Para niños y adolescentes que lo están pasando mal, con la familia cerca.</p>
+          </div>
+          <button class="pill" type="button" data-info="infantojuvenil">En qué consiste<span class="sr"> la terapia infantojuvenil</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </li>
+
+        <li class="tile tile--neu" data-tile="Neuroevaluación">
+          <svg class="deco deco--line" viewBox="0 0 220 70" aria-hidden="true"><path d="M4 40H52L64 14L82 62L98 24L112 40H168L180 28L192 40H216"/></svg>
+          <div>
+            <h3>Neuroevaluación</h3>
+            <p>Entender cómo aprende una persona cuando algo le cuesta y no se sabe por qué.</p>
+          </div>
+          <button class="pill" type="button" data-info="neuroevaluacion">En qué consiste<span class="sr"> la neuroevaluación</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO TRABAJO (puntos diferenciales) ============ -->
+  <section class="sec" id="como-trabajo" data-sx-anchor="como" aria-labelledby="h-como">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-como">Cómo trabajo</h2>
+      </div>
+      <ul class="why">
+        <li>
+          <span class="why__ic" style="--c:var(--butter);--r:-6deg"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6.5 17.2c2.4 1.6 4.2 3.9 5.6 6.6 2.6-6.9 6.6-12.2 13.4-16.4"/></svg></span>
+          <h3>Atención individualizada</h3>
+          <p>Cada persona llega con su historia. Lo que hacemos en terapia lo decidimos juntos y lo vamos ajustando.</p>
+        </li>
+        <li>
+          <span class="why__ic" style="--c:var(--sky);--r:4deg"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 18c2.6 1.4 4.6 3.6 6.2 6.4 2.4-7 6.4-12.4 13.6-16.2"/></svg></span>
+          <h3>Terapia integradora</h3>
+          <p>Combino enfoques según lo que necesites en cada momento.</p>
+        </li>
+        <li>
+          <span class="why__ic" style="--c:var(--rose);--r:-3deg"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 17c2.2 1.8 4.4 3.8 5.4 7 2.8-7.2 6.8-12 13-16"/></svg></span>
+          <h3>Supervisión de casos</h3>
+          <p>Comento mis casos con un equipo terapéutico; otras miradas ven lo que a mí se me escapa.</p>
+        </li>
+        <li>
+          <span class="why__ic" style="--c:var(--mint);--r:5deg"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6.8 16.8c2.6 1.5 4.3 4 5.8 6.9 2.4-6.8 6.8-12.4 13.2-16"/></svg></span>
+          <h3>Formación constante</h3>
+          <p>Sigo formándome para no quedarme con lo que ya sé.</p>
+        </li>
+        <li>
+          <span class="why__ic" style="--c:var(--coral);--r:-4deg"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6.2 17.6c2.4 1.5 4.4 3.7 5.8 6.4 2.7-7 6.5-12.2 13.5-16.2"/></svg></span>
+          <h3>Estudio y práctica</h3>
+          <p>Formación académica y práctica clínica en equipos multidisciplinares.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CON QUIÉN TRABAJO, DÓNDE NOS VEMOS, PREGUNTAS, BLOG Y PODCAST (bloques compartidos) ============ -->
+  <div data-sx="proof"></div>
+  <div data-sx="places"></div>
+  <div data-sx="faq"></div>
+  <div data-sx="blog"></div>
+  <div data-sx="podcast"></div>
+
+  <!-- ============ PRIMERA SESIÓN (sin compromiso) ============ -->
+  <section class="band" id="primera-sesion" aria-labelledby="h-primera">
+    <span class="d1" aria-hidden="true"></span><span class="d2" aria-hidden="true"></span>
+    <h2 id="h-primera">Pedir una primera sesión.</h2>
+    <p>La primera sesión es para conocernos. Después decides tú si seguimos. Puede ser online o presencial.</p>
+    <div class="band__btns">
+      <button class="big big--online" type="button" data-book data-book-mode="online">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12.5" rx="2.5"/><path d="M8 20.5h8M12 17v3.5"/></svg>
+        Online
+      </button>
+      <button class="big big--pres" type="button" data-book data-book-mode="presencial">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5s7-6.1 7-11.4a7 7 0 0 0-14 0c0 5.3 7 11.4 7 11.4z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        Presencial
+      </button>
+    </div>
+    <p class="band__ask">Si prefieres preguntar antes, <a href="#" data-sx-go="contacto">escríbeme</a>.</p>
+  </section>
+
+  <!-- ============ CONTACTO (bloque compartido) ============ -->
+  <div data-sx="contact"></div>
+
+</main>
+
+<!-- ============ PIE (bloque compartido: colegiada, ciudad, enlaces legales y urgencias están en shared/sections.js) ============ -->
+<div data-sx="footer"></div>
+
+<!-- WhatsApp: enlace directo a una conversación (el número y el mensaje salen de window.CLAUDIA y shared/services.js; se esconde al llegar al pie) -->
+<a class="wa" id="waFloat" href="https://wa.me/34600000000" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" title="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- PENDIENTE: poner el número real de WhatsApp (con prefijo, sin +) y el enlace de Cal.com -->
+<script>window.CLAUDIA={whatsapp:'34600000000',calLink:''}</script>
+<script src="shared/services.js" defer></script>
+<script src="shared/sections.js" defer></script>
+<script src="shared/booking.js" defer></script>
+<script src="shared/switcher.js" defer></script>
+<script>
+  /* Selector de público: cambia el color del bloque (y el del bloque de dudas), la frase, la terapia que abre el botón y la tarjeta destacada.
+     En cada opción: data-tone = color, data-service = tarjeta de "Qué ofrezco", data-key = terapia que abre el botón
+     (individual, pareja, familiar, infantojuvenil o neuroevaluacion), data-for = texto que lee el lector de pantalla. */
+  (() => {
+    const hero = document.querySelector('.hero');
+    const radios = hero.querySelectorAll('input[name="who"]');
+    const frases = hero.querySelectorAll('[data-lead]');
+    const cta = document.getElementById('heroCta');
+    const ctaFor = document.getElementById('heroCtaFor');
+    const tarjetas = document.querySelectorAll('[data-tile]');
+
+    function aplicar(radio) {
+      hero.style.setProperty('--tone', radio.dataset.tone);
+      document.documentElement.style.setProperty('--tone-page', radio.dataset.tone);
+      frases.forEach((p) => p.classList.toggle('is-on', p.dataset.lead === radio.value));
+      cta.dataset.info = radio.dataset.key;
+      ctaFor.textContent = ' ' + radio.dataset.for;
+      tarjetas.forEach((t) => t.classList.toggle('is-match', t.dataset.tile === radio.dataset.service));
+    }
+
+    radios.forEach((r) => r.addEventListener('change', () => aplicar(r)));
+    aplicar(hero.querySelector('input[name="who"]:checked') || radios[0]);
+  })();
+
+  /* WhatsApp flotante: enlace directo con el número y el mensaje de pregunta; se esconde al llegar al pie */
+  document.addEventListener('DOMContentLoaded', () => {
+    const wa = document.getElementById('waFloat');
+    const cfg = window.CLAUDIA || {};
+    const msg = (window.CLAUDIA_MESSAGES || {}).question || '';
+    wa.href = 'https://wa.me/' + (cfg.whatsapp || '34600000000') + (msg ? '?text=' + encodeURIComponent(msg) : '');
+    const pie = document.querySelector('.sx--footer');
+    if (pie && 'IntersectionObserver' in window) {
+      new IntersectionObserver(([e]) => wa.classList.toggle('is-away', e.isIntersecting), { rootMargin: '0px 0px -150px 0px' }).observe(pie);
+    }
+  });
+</script>
+</body>
+</html>

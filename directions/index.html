@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claudia Pubill · Cinco propuestas para tu web</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{--ink:#1c1b22;--muted:#5d5b68;--line:#dcd9e2;--bg:#f6f5f8;--card:#fff;--focus:#4a3fd1}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+  header,main,footer{max-width:72rem;margin:0 auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+  header{padding-top:clamp(2.5rem,7vw,5rem)}
+  h1{margin:0;font:600 clamp(2rem,5vw,3.4rem)/1.05 Georgia,"Times New Roman",serif;letter-spacing:-.02em;max-width:18ch}
+  header p{max-width:42rem;color:var(--muted);margin:1.1rem 0 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,31rem),1fr));gap:clamp(1.2rem,3vw,2rem);margin:clamp(2rem,5vw,3.5rem) 0}
+  .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .card__img{aspect-ratio:16/10;background:#e6e4ea;display:block;width:100%;object-fit:cover;object-position:top}
+  .card__body{display:flex;flex-direction:column;gap:.9rem;padding:1.4rem 1.5rem 1.6rem;flex:1}
+  .card h2{margin:0;font:600 1.5rem/1.15 Georgia,serif}
+  .card p{margin:0}
+  .sw{display:flex;gap:6px;flex-wrap:wrap}
+  .sw i{width:34px;height:34px;border-radius:50%;border:1px solid rgba(0,0,0,.12);display:block}
+  .meta{color:var(--muted);font-size:.95rem}
+  dl{margin:0;display:grid;gap:.5rem;font-size:.97rem}
+  dt{font-weight:650}
+  dd{margin:0;color:var(--muted)}
+  .go{margin-top:auto;align-self:flex-start;padding:.8rem 1.3rem;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600}
+  .go:hover{background:#383649}
+  .next{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.5rem;margin-bottom:3rem}
+  .next h2{margin:0 0 .5rem;font:600 1.25rem/1.2 Georgia,serif}
+  .next p{margin:0;color:var(--muted);max-width:46rem}
+  footer{padding-bottom:5rem;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>Seis maneras de ser tu web</h1>
+  <p>Son seis propuestas de diseño, con el mismo contenido y la misma reserva de primera sesión. Ábrelas, recórrelas en el ordenador y en el móvil, y dinos cuál se parece más a ti. Se pueden mezclar: puedes quedarte con el color de una y la forma de otra.</p>
+</header>
+<main>
+  <div class="grid">
+
+    <article class="card">
+      <img class="card__img" src="previews/a.png" alt="" loading="lazy" onerror="this.style.display='none'">
+      <div class="card__body">
+        <h2>A · Respira</h2>
+        <p>Un campo de puntos vivo que se mece como la hierba y se inclina al pasar el cursor. Sereno, artesanal y distinto a lo que se ve en psicología.</p>
+        <div class="sw" role="img" aria-label="Paleta: verde niebla, verde abeto, verde musgo y ámbar"><i style="background:#E3E9E1"></i><i style="background:#1D3A39"></i><i style="background:#5F7C6F"></i><i style="background:#E0A04E"></i></div>
+        <p class="meta">Letras: Newsreader y Hanken Grotesk</p>
+        <dl>
+          <div><dt>Lo mejor</dt><dd>Se recuerda, transmite calma y no necesita fotos para lucir.</dd></div>
+          <div><dt>Ten en cuenta</dt><dd>Es la más “de autor”. Más adelante el campo se puede sustituir por un vídeo propio con esta misma técnica.</dd></div>
+        </dl>
+        <a class="go" href="a-respira.html">Ver propuesta A</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card__img" src="previews/b.png" alt="" loading="lazy" onerror="this.style.display='none'">
+      <div class="card__body">
+        <h2>B · Calidez</h2>
+        <p>Bloques de color y una pregunta al entrar: “¿Quién viene a terapia?”. Según eliges niño, adolescente, familia, pareja o adulto, la página cambia de color y de mensaje.</p>
+        <div class="sw" role="img" aria-label="Paleta: ciruela, mantequilla, coral y azul cielo"><i style="background:#2E2140"></i><i style="background:#F7D26A"></i><i style="background:#F58F7C"></i><i style="background:#9EC9EB"></i></div>
+        <p class="meta">Letras: Young Serif y Figtree</p>
+        <dl>
+          <div><dt>Lo mejor</dt><dd>Cercana y fácil: cada familia se ve reflejada desde el primer segundo.</dd></div>
+          <div><dt>Ten en cuenta</dt><dd>Es la más juguetona; transmite menos “consulta clínica”.</dd></div>
+        </dl>
+        <a class="go" href="b-calidez.html">Ver propuesta B</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card__img" src="previews/c.png" alt="" loading="lazy" onerror="this.style.display='none'">
+      <div class="card__body">
+        <h2>C · Amanecer</h2>
+        <p>Al bajar, la página pasa de la noche al amanecer, como un proceso de terapia. Incluye un pequeño ejercicio de respiración en la portada.</p>
+        <div class="sw" role="img" aria-label="Paleta: noche, malva, melocotón y sol"><i style="background:#0E0C24"></i><i style="background:#A8627F"></i><i style="background:#F6C4A4"></i><i style="background:#FFC370"></i></div>
+        <p class="meta">Letras: Bricolage Grotesque y Albert Sans</p>
+        <dl>
+          <div><dt>Lo mejor</dt><dd>La más emotiva y memorable. Cuenta una historia sin decirla.</dd></div>
+          <div><dt>Ten en cuenta</dt><dd>Es narrativa: la información llega al ir bajando, no de golpe.</dd></div>
+        </dl>
+        <a class="go" href="c-amanecer.html">Ver propuesta C</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card__img" src="previews/d.png" alt="" loading="lazy" onerror="this.style.display='none'">
+      <div class="card__body">
+        <h2>D · Ventana</h2>
+        <p>Luz de ventana sobre una pared con sombras de hojas que se mecen. Clásica, tranquila y pensada para lucir tus fotos.</p>
+        <div class="sw" role="img" aria-label="Paleta: yeso rosado, oliva, bosque y salvia"><i style="background:#E9DDD8"></i><i style="background:#3F4F33"></i><i style="background:#26332B"></i><i style="background:#C9D2C0"></i></div>
+        <p class="meta">Letras: Cormorant Garamond y Jost</p>
+        <dl>
+          <div><dt>Lo mejor</dt><dd>La más sobria y de confianza; encaja con cualquier edad y foto.</dd></div>
+          <div><dt>Ten en cuenta</dt><dd>Brilla de verdad con fotos tuyas y de tu espacio.</dd></div>
+        </dl>
+        <a class="go" href="d-ventana.html">Ver propuesta D</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card__img" src="previews/e.png" alt="" loading="lazy" onerror="this.style.display='none'">
+      <div class="card__body">
+        <h2>E · Sobremesa</h2>
+        <p>La más humana: fotografías de personas, colores cálidos y letra grande, como una conversación tranquila en torno a una mesa. Todo se lee con facilidad.</p>
+        <div class="sw" role="img" aria-label="Paleta: blanco, verde profundo, albaricoque y lila"><i style="background:#FFFFFF"></i><i style="background:#1F5A43"></i><i style="background:#F5A662"></i><i style="background:#E4DAF5"></i></div>
+        <p class="meta">Letras: Young Serif y Figtree</p>
+        <dl>
+          <div><dt>Lo mejor</dt><dd>Se parece a lo que la gente espera de una psicóloga: cercana, clara y con personas.</dd></div>
+          <div><dt>Ten en cuenta</dt><dd>Las fotos de ahora son de ejemplo. Con tus propias fotos será otra cosa.</dd></div>
+        </dl>
+        <a class="go" href="e-sobremesa.html">Ver propuesta E</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card__img" src="previews/f.png" alt="" loading="lazy" onerror="this.style.display='none'">
+      <div class="card__body">
+        <h2>F · Alba</h2>
+        <p>La de Calidez con lo que pediste: la barra arriba, una reflexión distinta cada vez que entras y, al bajar, el amanecer con «Respira conmigo», que ahora empieza con luz suave y no a oscuras. Se puede leer en catalán, español e inglés.</p>
+        <div class="sw" role="img" aria-label="Paleta: ciruela, mantequilla, coral, azul cielo y malva del amanecer"><i style="background:#2E2140"></i><i style="background:#F7D26A"></i><i style="background:#F58F7C"></i><i style="background:#9EC9EB"></i><i style="background:#D6C2E8"></i></div>
+        <p class="meta">Letras: Young Serif y Figtree</p>
+        <dl>
+          <div><dt>Lo mejor</dt><dd>Junta lo que más te gustó de B y de C, y es la única que ya funciona en tres idiomas.</dd></div>
+          <div><dt>Ten en cuenta</dt><dd>El amanecer pide bajar un poco más. Si se hace largo, se puede acortar.</dd></div>
+        </dl>
+        <a class="go" href="f-alba.html">Ver propuesta F</a>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="next" aria-labelledby="t-next">
+    <h2 id="t-next">Lo que se repite en las seis</h2>
+    <p>Cada terapia tiene un botón «En qué consiste» que abre una ventana con de qué se trata y cómo son las sesiones, y debajo la forma de pedir cita. Las seis páginas siguen ahora la estructura de Somos Estupendas con un ritmo más tranquilo: dudas, con quién trabajo, dónde nos vemos, preguntas frecuentes, un blog y un podcast de ejemplo (todavía no existen), contacto y pie. «Pedir una primera sesión» abre otra ventana con dos caminos: escribirte por WhatsApp (con el mensaje ya preparado según la terapia y la modalidad) o elegir día y hora en un calendario de las próximas semanas. El calendario que ves es de ejemplo; en la web real será tu Cal.com conectado a tu Google Calendar. Las explicaciones de cada terapia son un borrador: revísalas, porque tienen que contar cómo trabajas de verdad. Los datos que faltan (teléfono, dirección de la consulta en Barcelona, nº de colegiada, título, duración y precio de la primera sesión, y en qué consiste tu colaboración con Somos Estupendas) están entre corchetes. No hay opiniones de pacientes: la publicidad sanitaria lo desaconseja. Por ahora solo F cambia de idioma (botones CA · ES · EN arriba); si eliges otra, se le puede añadir.</p>
+  </section>
+</main>
+<footer>Propuestas de diseño, no es la web final. Los datos de contacto son de ejemplo.</footer>
+<script src="shared/switcher.js" defer></script>
+</body>
+</html>

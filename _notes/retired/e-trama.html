@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claudia Pubill · Psicóloga · Propuesta E, Trama</title>
+<meta name="description" content="Claudia Pubill, psicóloga. Terapia individual, de pareja, familiar e infantojuvenil y neuroevaluaciones, en consulta y online. Lee a tu ritmo y escríbele cuando quieras.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#EAEEF1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Alegreya+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/booking.css">
+<link rel="stylesheet" href="shared/sections.css">
+<style>
+/* Concepto E · Trama
+   Una trama es el hilo que cruza la urdimbre y hace la tela; también es la historia de cada persona.
+   Lo único atrevido es el telar del inicio, que se va tejiendo solo. Todo lo demás es tipografía, aire y líneas finas. */
+:root{
+  --tela:#EAEEF1;    /* fondo, tela lavada */
+  --tinta:#1D2330;   /* texto */
+  --marino:#23456E;  /* azul, acción */
+  --teja:#B04A31;    /* terracota, acento */
+  --lino:#C5CFD9;    /* líneas, hilos neutros */
+  --gris:#525C6A;    /* texto secundario */
+  --tela-2:#DDE4EA;  /* fondo alterno */
+  --display:'Young Serif','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+  --body:'Alegreya Sans','Gill Sans','Trebuchet MS','Segoe UI',system-ui,sans-serif;
+  --gutter:clamp(1.1rem,4vw,3.5rem);
+  --max:1240px;
+  --head:4.25rem;
+  /* ventana de reserva compartida */
+  --bk-bg:#F5F7F9; --bk-ink:var(--tinta); --bk-muted:var(--gris); --bk-line:#CBD4DD;
+  --bk-accent:var(--marino); --bk-accent-ink:#fff; --bk-radius:10px;
+  --bk-display:var(--display); --bk-display-weight:400; --bk-body:var(--body);
+  --bk-scrim:rgba(29,35,48,.55);
+  /* bloques compartidos (shared/sections.css) */
+  --sx-ink:var(--tinta); --sx-muted:var(--gris); --sx-line:var(--lino);
+  --sx-accent:var(--marino); --sx-accent-ink:#fff;
+  --sx-alt:var(--tela-2); --sx-card:#F5F7F9;
+  --sx-radius:10px; --sx-btn-radius:8px;
+  --sx-display:var(--display); --sx-display-weight:400; --sx-body:var(--body);
+  --sx-max:calc(var(--max) + 2*var(--gutter)); --sx-gutter:var(--gutter);
+  --sx-foot-bg:var(--tela-2); --sx-foot-ink:var(--tinta);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:106.25%;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font:400 1rem/1.55 var(--body);color:var(--tinta);background:var(--tela);-webkit-font-smoothing:antialiased}
+canvas{display:block}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button{font:inherit;color:inherit}
+::selection{background:var(--teja);color:var(--tela)}
+:focus-visible{outline:3px solid var(--marino);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:1rem;top:-6rem;z-index:50;padding:.6rem 1rem;background:var(--tinta);color:var(--tela);border-radius:6px;text-decoration:none}
+.skip:focus{top:1rem}
+.wrap{width:min(100% - 2*var(--gutter),var(--max));margin-inline:auto}
+
+/* cabecera */
+.top{position:sticky;top:0;z-index:20;background:var(--tela);border-bottom:1px solid var(--lino)}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--head)}
+.brand{display:flex;align-items:baseline;gap:.65rem;text-decoration:none}
+.brand__n{font:400 1.3rem/1 var(--display);white-space:nowrap}
+.brand__r{display:none;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+@media (min-width:480px){.brand__r{display:inline}}
+.nav{display:flex;gap:1.6rem;align-items:center}
+.nav a{display:none;text-decoration:none;font-weight:500;padding:.35rem 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--teja)}
+@media (min-width:820px){.nav a{display:inline-block}}
+.nav .nav__more{display:none}
+@media (min-width:1040px){.nav a.nav__more{display:inline-block}}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:3rem;padding:.7rem 1.35rem;border-radius:8px;border:1.5px solid transparent;font-weight:600;text-decoration:none;cursor:pointer;background:none;transition:background .18s,color .18s,border-color .18s}
+.btn--primary{background:var(--marino);color:#fff;border-color:var(--marino)}
+.btn--primary:hover{background:#1B3758;border-color:#1B3758}
+.btn--ghost{border-color:var(--tinta);color:var(--tinta)}
+.btn--ghost:hover{background:var(--tinta);color:var(--tela)}
+.btn--sm{min-height:2.6rem;padding:.4rem 1rem;font-size:.95rem}
+.btn--light{background:var(--tela);color:var(--marino);border-color:var(--tela);min-height:3.4rem;padding-inline:1.8rem;font-size:1.1rem}
+.btn--light:hover{background:#fff;border-color:#fff}
+.band .btn:focus-visible{outline-color:var(--tela)}
+.link{font-weight:600;text-decoration:underline;text-underline-offset:.22em;text-decoration-thickness:1.5px;text-decoration-color:var(--teja);padding:.4rem 0}
+.link:hover{text-decoration-color:var(--tinta)}
+
+/* tipografía */
+.h1{font:400 clamp(2.2rem,4.4vw,3.7rem)/1.04 var(--display);letter-spacing:-.012em;text-wrap:balance;margin:.9rem 0 1.2rem}
+.h2{font:400 clamp(1.9rem,3.4vw,2.9rem)/1.1 var(--display);letter-spacing:-.01em;text-wrap:balance}
+.label{display:flex;align-items:center;gap:.7rem;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.label::before{content:"";flex:none;width:1.6rem;height:3px;background:var(--teja);border-radius:2px}
+.lead{font-size:1.15rem;color:var(--gris);max-width:40rem}
+.sec__head{max-width:46rem;margin-bottom:clamp(2rem,4vw,3rem)}
+.sec__head .h2{margin:.8rem 0 .9rem}
+
+/* portada */
+.hero{display:grid;min-height:calc(100vh - var(--head));min-height:calc(100svh - var(--head))}
+.hero__text{order:2;max-width:42rem;padding:clamp(2rem,6vw,4rem) var(--gutter) clamp(2.5rem,6vw,4rem)}
+.hero__p{font-size:clamp(1.1rem,1.6vw,1.3rem);max-width:30rem;color:var(--gris);text-wrap:pretty}
+.hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.6rem;margin-top:1.8rem}
+.hero__small{margin-top:1rem;font-size:.95rem;color:var(--gris)}
+.loom{order:1;position:relative;min-height:40vh;min-height:40svh;overflow:hidden;background:var(--tela)}
+.loom canvas{position:absolute;inset:0;width:100%;height:100%}
+@media (min-width:820px){
+  .hero{grid-template-columns:minmax(0,48fr) minmax(0,52fr)}
+  .hero__text{order:1;align-self:center;max-width:none;padding-left:max(var(--gutter),calc((100vw - var(--max))/2))}
+  .hero__text>*{max-width:36rem}
+  .hero__text .h1{max-width:12.5em}
+  .loom{order:2;min-height:0;border-left:1px solid var(--lino)}
+}
+
+/* secciones */
+.sec,.band{scroll-margin-top:var(--head)}
+.sec{padding:clamp(3.5rem,9vw,7rem) 0}
+.sec--line{border-top:1px solid var(--lino)}
+.sec--alt{background:var(--tela-2)}
+
+/* quién soy */
+.who{display:grid;gap:2.5rem}
+.photo{aspect-ratio:4/5;width:min(100%,17rem);border-radius:10px;display:grid;place-items:center;color:var(--gris);font-size:.95rem;letter-spacing:.04em}
+.photo span{padding:.5rem .9rem;background:var(--tela);border-radius:6px}
+.photo__cap{margin-top:.8rem;font-size:.9rem;color:var(--gris)}
+.who__text .big{font:400 clamp(1.35rem,2.2vw,1.8rem)/1.3 var(--display);margin-bottom:1.3rem;text-wrap:pretty;max-width:24em}
+.who__text p{max-width:38rem;font-size:1.08rem}
+.who__text p+p{margin-top:1rem}
+@media (min-width:820px){
+  .who{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,6vw,6rem);align-items:start}
+  .photo{width:min(100%,26rem)}
+}
+
+/* qué ofrezco */
+.serv{border-top:1px solid var(--lino)}
+.serv__row{display:grid;gap:.7rem 1.1rem;align-items:center;padding:1.6rem 0;border-bottom:1px solid var(--lino);grid-template-columns:auto minmax(0,1fr);grid-template-areas:"s t" "d d" "b b"}
+.serv__sw{grid-area:s}
+.serv__t{grid-area:t;font:400 clamp(1.4rem,2vw,1.75rem)/1.15 var(--display)}
+.serv__d{grid-area:d;color:var(--gris);max-width:36rem;text-wrap:pretty}
+.serv__b{grid-area:b;justify-self:start;margin-top:.1rem}
+@media (min-width:900px){
+  .serv__row{gap:.5rem 1.6rem;grid-template-columns:auto minmax(0,1fr) minmax(0,1.6fr) auto;grid-template-areas:"s t d b";padding:1.9rem 0}
+  .serv__b{margin:0}
+}
+
+/* cómo trabajo */
+.two{display:grid;gap:2.5rem}
+.two__a .h2{margin:.8rem 0 .9rem}
+.how li{position:relative;padding:1.4rem 0 1.4rem 1.6rem;border-bottom:1px solid var(--lino)}
+.how li:first-child{border-top:1px solid var(--lino)}
+.how li::before{content:"";position:absolute;left:0;top:1.55rem;bottom:1.55rem;width:4px;border-radius:2px;background:var(--lino)}
+.how li:nth-child(3n+1)::before{background:var(--marino)}
+.how li:nth-child(3n+2)::before{background:var(--teja)}
+.how h3{font:400 1.3rem/1.2 var(--display);margin-bottom:.35rem}
+.how p{max-width:36rem;text-wrap:pretty}
+@media (min-width:900px){
+  .two{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,6vw,6rem)}
+  .two__a{position:sticky;top:calc(var(--head) + 2rem);align-self:start}
+}
+
+/* reserva */
+.band{position:relative;background:var(--marino);color:#fff;padding:clamp(3.5rem,9vw,6.5rem) 0}
+.band::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(90deg,var(--teja) 0 14px,var(--tela) 14px 20px,var(--lino) 20px 34px,var(--tela) 34px 40px)}
+.band__in{display:grid;gap:1.2rem}
+.band__in>*{max-width:46rem}
+.band__in .h2{color:#fff}
+.band__p{font-size:1.15rem;color:#D9E2EF;max-width:34rem;text-wrap:pretty}
+.band__btns{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:.4rem}
+.band__note{font-size:.95rem;color:#C9D4E3;margin-top:.2rem}
+
+.band__note a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:.22em;text-decoration-thickness:1.5px;text-decoration-color:var(--teja)}
+.band__note a:hover{text-decoration-color:#fff}
+.band a:focus-visible{outline-color:var(--tela)}
+
+/* muestras de tela: el telar en pequeño, solo con CSS. Las bandas de color siguen la secuencia de la trama del inicio. */
+.sw,.sx-ph,.sx--doubts .sx__in{
+  --base:var(--tela-2); --warp:#8EA1B5; --p:8px; --t:5px; --k:12px;
+  --bands:linear-gradient(0deg,var(--lino) 0 40%,var(--marino) 40% 46%,var(--lino) 46% 90%,var(--teja) 90% 94%,var(--lino) 94% 100%);
+  --warps:linear-gradient(90deg,var(--warp) 0 calc(0px + 2px),transparent calc(0px + 2px) calc(var(--k)*1),var(--warp) calc(var(--k)*1) calc(calc(var(--k)*1) + 2px),transparent calc(calc(var(--k)*1) + 2px) calc(var(--k)*2),var(--marino) calc(var(--k)*2) calc(calc(var(--k)*2) + 2px),transparent calc(calc(var(--k)*2) + 2px) calc(var(--k)*3),var(--warp) calc(var(--k)*3) calc(calc(var(--k)*3) + 2px),transparent calc(calc(var(--k)*3) + 2px) calc(var(--k)*4),var(--warp) calc(var(--k)*4) calc(calc(var(--k)*4) + 2px),transparent calc(calc(var(--k)*4) + 2px) calc(var(--k)*5),var(--teja) calc(var(--k)*5) calc(calc(var(--k)*5) + 2px),transparent calc(calc(var(--k)*5) + 2px) calc(var(--k)*6),var(--warp) calc(var(--k)*6) calc(calc(var(--k)*6) + 2px),transparent calc(calc(var(--k)*6) + 2px) calc(var(--k)*7));
+}
+.sw,.sx-ph{
+  position:relative; isolation:isolate; overflow:hidden;
+  background:repeating-linear-gradient(90deg,rgba(142,161,181,.35) 0 2px,transparent 2px var(--k)),var(--base);
+}
+.sw::before,.sw::after,.sx-ph::before,.sx-ph::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none}
+.sw::before,.sx-ph::before{
+  background:var(--bands);
+  -webkit-mask-image:repeating-linear-gradient(0deg,#000 0 var(--t),transparent var(--t) var(--p));
+  mask-image:repeating-linear-gradient(0deg,#000 0 var(--t),transparent var(--t) var(--p));
+}
+.sw::after,.sx-ph::after{
+  background:var(--warps) 0 0/calc(var(--k)*7) 100% repeat-x;
+  -webkit-mask-image:repeating-conic-gradient(#000 0 25%,transparent 0 50%);
+  mask-image:repeating-conic-gradient(#000 0 25%,transparent 0 50%);
+  -webkit-mask-size:calc(var(--k)*2) calc(var(--p)*2);
+  mask-size:calc(var(--k)*2) calc(var(--p)*2);
+}
+.sw--1{--bands:linear-gradient(0deg,var(--lino) 0 40%,var(--marino) 40% 60%,var(--lino) 60% 90%,var(--teja) 90% 100%)}
+.sw--2{--bands:linear-gradient(0deg,var(--lino) 0 60%,var(--marino) 60% 70%,var(--lino) 70% 100%)}
+.sw--3{--bands:linear-gradient(0deg,var(--teja) 0 20%,var(--lino) 20% 90%,var(--marino) 90% 100%)}
+.sw--4{--bands:linear-gradient(0deg,var(--marino) 0 20%,var(--lino) 20% 50%,var(--teja) 50% 60%,var(--lino) 60% 100%)}
+.sw--5{--bands:linear-gradient(0deg,var(--marino) 0 10%,var(--lino) 10% 40%,var(--teja) 40% 60%,var(--lino) 60% 100%)}
+.serv__sw{--p:6px;--t:4px;--k:9px;width:3.75rem;height:3.75rem;border-radius:6px}
+@media (min-width:900px){.serv__sw{width:4.5rem;height:3.5rem}}
+
+/* bloques compartidos, vestidos de Trama */
+.sx{scroll-margin-top:var(--head)}
+.sx__h::before{content:"";display:block;width:1.6rem;height:3px;margin-bottom:.75rem;background:var(--teja);border-radius:2px}
+.sx__lead{font-size:1.15rem}
+.sx__card h3{font-size:clamp(1.25rem,1.6vw,1.4rem)}
+.sx__card{border-radius:10px}
+.sx__btn{min-height:3rem;font-weight:600}
+.sx__link{text-decoration-color:var(--teja)}
+.sx__link:hover{text-decoration-color:var(--tinta)}
+.sx__q summary::after{color:var(--teja)}
+.sx__q summary{font-size:1.12rem}
+.sx__tag{background:var(--tela)}
+.sx__soft,.sx__pill{border-color:var(--lino);background:var(--tela)}
+.sx--alt.sx--proof,.sx--alt.sx--faq,.sx--alt.sx--podcast{background:var(--tela)}
+.sx--proof,.sx--faq{border-top:1px solid var(--lino)}
+.sx--places,.sx--blog{background:var(--tela-2)}
+.sx--faq{background:var(--tela)}
+.sx--podcast{border-top:1px solid var(--lino)}
+.sx--contact{border-top:0}
+.sx--contact .sx__ico{background:var(--tela-2)}
+.sx--footer{border-top:1px solid var(--lino)}
+.sx--footer .sx__in{padding-bottom:5.5rem}
+.sx--footer .sx__fh{letter-spacing:.01em}
+
+/* dudas: tranquila, con un trozo de tela al lado */
+.sx--doubts{background:var(--tela-2)}
+.sx--doubts .sx__in{position:relative;isolation:isolate}
+.sx--doubts .sx__btn{background:transparent;color:var(--tinta);border:1.5px solid var(--tinta)}
+.sx--doubts .sx__btn:hover{background:var(--tinta);color:var(--tela);filter:none}
+@media (min-width:1040px){
+  .sx--doubts .sx__in{padding-right:calc(var(--gutter) + 17rem)}
+  .sx--doubts .sx__in::before,.sx--doubts .sx__in::after{
+    content:"";position:absolute;z-index:-1;right:var(--gutter);top:50%;width:14rem;height:9.5rem;margin-top:-4.75rem;border-radius:10px
+  }
+  .sx--doubts .sx__in::before{
+    --bands:linear-gradient(0deg,var(--lino) 0 30%,var(--marino) 30% 37%,var(--lino) 37% 76%,var(--teja) 76% 81%,var(--lino) 81% 100%);
+    background:var(--bands);
+    -webkit-mask-image:repeating-linear-gradient(0deg,#000 0 var(--t),transparent var(--t) var(--p));
+    mask-image:repeating-linear-gradient(0deg,#000 0 var(--t),transparent var(--t) var(--p));
+  }
+  .sx--doubts .sx__in::after{
+    background:var(--warps) 0 0/calc(var(--k)*7) 100% repeat-x;
+    -webkit-mask-image:repeating-conic-gradient(#000 0 25%,transparent 0 50%);
+    mask-image:repeating-conic-gradient(#000 0 25%,transparent 0 50%);
+    -webkit-mask-size:calc(var(--k)*2) calc(var(--p)*2);
+    mask-size:calc(var(--k)*2) calc(var(--p)*2);
+  }
+}
+
+/* huecos de foto: cada uno es un tejido distinto, con pocas bandas para que no pesen */
+.sx-ph{border-bottom-color:var(--lino)}
+.sx-ph figcaption{padding:.3rem .7rem;background:var(--tela);border-radius:6px}
+.sx--places .sx__card:nth-child(1) .sx-ph{--bands:linear-gradient(0deg,var(--lino) 0 30%,var(--marino) 30% 35%,var(--lino) 35% 70%,var(--teja) 70% 73%,var(--lino) 73% 100%)}
+.sx--places .sx__card:nth-child(2) .sx-ph{--bands:linear-gradient(0deg,var(--marino) 0 5%,var(--lino) 5% 52%,var(--marino) 52% 57%,var(--lino) 57% 100%)}
+.sx-ph--1{--bands:linear-gradient(0deg,var(--lino) 0 30%,var(--teja) 30% 33%,var(--lino) 33% 68%,var(--marino) 68% 74%,var(--lino) 74% 100%)}
+.sx-ph--2{--bands:linear-gradient(0deg,var(--marino) 0 6%,var(--lino) 6% 56%,var(--teja) 56% 62%,var(--lino) 62% 100%)}
+.sx-ph--3{--bands:linear-gradient(0deg,var(--lino) 0 46%,var(--marino) 46% 50%,var(--lino) 50% 58%,var(--marino) 58% 62%,var(--lino) 62% 92%,var(--teja) 92% 96%,var(--lino) 96% 100%)}
+.sx-ph--pod{--bands:linear-gradient(0deg,var(--lino) 0 24%,var(--teja) 24% 28%,var(--lino) 28% 60%,var(--marino) 60% 68%,var(--lino) 68% 100%);max-width:16rem}
+.photo{--bands:linear-gradient(0deg,var(--lino) 0 28%,var(--marino) 28% 33%,var(--lino) 33% 71%,var(--teja) 71% 73%,var(--lino) 73% 100%)}
+</style>
+</head>
+<body>
+<a class="skip" href="#inicio">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#inicio" aria-label="Claudia Pubill, psicóloga. Inicio">
+      <span class="brand__n">Claudia Pubill</span>
+      <span class="brand__r">Psicóloga</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#quien">Quién soy</a>
+      <a href="#terapias">Qué ofrezco</a>
+      <a href="#como">Cómo trabajo</a>
+      <a class="nav__more" href="#sx-preguntas" data-sx-go="preguntas">Preguntas</a>
+      <button class="btn btn--ghost btn--sm" type="button" data-sx-go="contacto">Escríbeme</button>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero__text">
+      <p class="label">Claudia Pubill, psicóloga</p>
+      <h1 id="hero-h" class="h1">Primero te escucho. Después decidimos juntos por dónde empezar.</h1>
+      <p class="hero__p">Terapia para niños, adolescentes, familias, parejas y adultos. En consulta o online.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#quien">Conóceme</a>
+        <a class="link" href="#terapias">Ver las terapias</a>
+      </div>
+      <p class="hero__small">Cuando quieras, <a class="link" href="#sx-contacto" data-sx-go="contacto">escríbeme</a>.</p>
+    </div>
+    <div class="loom" aria-hidden="true"><canvas></canvas></div>
+  </section>
+
+  <div data-sx="doubts"></div>
+
+  <section id="quien" class="sec" data-sx-anchor="quien" aria-labelledby="quien-h">
+    <div class="wrap who">
+      <div>
+        <div class="photo sw"><span>[foto pendiente]</span></div>
+        <p class="photo__cap">Claudia Pubill, en consulta.</p>
+      </div>
+      <div class="who__text">
+        <p class="label">Quién soy</p>
+        <h2 id="quien-h" class="h2" style="margin:.8rem 0 1.2rem">Curiosa y reflexiva. Escucho sin juicios.</h2>
+        <p class="big">Respeto la historia de cada persona tal como viene. Me motiva el cambio.</p>
+        <p>Soy cercana sin dejar de ser profesional, y respeto los límites que pone cada uno.</p>
+        <p>Atiendo a niños, adolescentes, familias, parejas y adultos. Mi forma de trabajar es integradora: se adapta a la persona que tengo delante.</p>
+        <p>Trabajo en equipos multidisciplinares y llevo mis casos a supervisión. Eso me ayuda a entender mejor a cada persona y a mí misma.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="terapias" class="sec sec--line" data-sx-anchor="terapias" aria-labelledby="terapias-h">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="label">Qué ofrezco</p>
+        <h2 id="terapias-h" class="h2">Cinco maneras de trabajar, según quién venga.</h2>
+        <p class="lead">En pocas líneas, para quién es cada una. Si quieres saber cómo es el proceso, abre «En&nbsp;qué&nbsp;consiste».</p>
+      </div>
+      <ol class="serv">
+        <li class="serv__row">
+          <span class="sw sw--1 serv__sw" aria-hidden="true"></span>
+          <h3 class="serv__t">Terapia individual</h3>
+          <p class="serv__d">Sesiones solo para ti. Ansiedad, tristeza, un duelo, una decisión que no sale o la sensación de que algo no encaja desde hace tiempo.</p>
+          <button class="btn btn--ghost btn--sm serv__b" type="button" data-info="individual">En qué consiste<span class="sr"> la terapia individual</span></button>
+        </li>
+        <li class="serv__row">
+          <span class="sw sw--2 serv__sw" aria-hidden="true"></span>
+          <h3 class="serv__t">Terapia de pareja</h3>
+          <p class="serv__d">Para parejas que discuten siempre por lo mismo, que pasan por una crisis o por un cambio grande, o que dudan si seguir.</p>
+          <button class="btn btn--ghost btn--sm serv__b" type="button" data-info="pareja">En qué consiste<span class="sr"> la terapia de pareja</span></button>
+        </li>
+        <li class="serv__row">
+          <span class="sw sw--3 serv__sw" aria-hidden="true"></span>
+          <h3 class="serv__t">Terapia familiar</h3>
+          <p class="serv__d">Cuando algo afecta a toda la casa: conflictos con los hijos, una separación, un duelo o la convivencia con un adolescente.</p>
+          <button class="btn btn--ghost btn--sm serv__b" type="button" data-info="familiar">En qué consiste<span class="sr"> la terapia familiar</span></button>
+        </li>
+        <li class="serv__row">
+          <span class="sw sw--4 serv__sw" aria-hidden="true"></span>
+          <h3 class="serv__t">Terapia infantojuvenil</h3>
+          <p class="serv__d">Niños y adolescentes que lo están pasando mal y no siempre saben explicarlo. Suelo empezar hablando con la familia.</p>
+          <button class="btn btn--ghost btn--sm serv__b" type="button" data-info="infantojuvenil">En qué consiste<span class="sr"> la terapia infantojuvenil</span></button>
+        </li>
+        <li class="serv__row">
+          <span class="sw sw--5 serv__sw" aria-hidden="true"></span>
+          <h3 class="serv__t">Neuroevaluación</h3>
+          <p class="serv__d">Entender cómo aprende una persona cuando algo le cuesta y no se sabe por qué. Termina con un informe y una sesión para explicarlo.</p>
+          <button class="btn btn--ghost btn--sm serv__b" type="button" data-info="neuroevaluacion">En qué consiste<span class="sr"> la neuroevaluación</span></button>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="como" class="sec sec--alt" data-sx-anchor="como" aria-labelledby="como-h">
+    <div class="wrap two">
+      <div class="two__a">
+        <p class="label">Cómo trabajo</p>
+        <h2 id="como-h" class="h2">Lo que te vas a encontrar en consulta.</h2>
+        
+      </div>
+      <ul class="how">
+        <li>
+          <h3>Atención individualizada</h3>
+          <p>Adapto el ritmo y el enfoque a cada persona.</p>
+        </li>
+        <li>
+          <h3>Terapia integradora</h3>
+          <p>No sigo un único método. Combino enfoques según lo que a ti te sirva, y lo vamos revisando.</p>
+        </li>
+        <li>
+          <h3>Supervisión con un equipo terapéutico</h3>
+          <p>Reviso los casos con otros profesionales. Es una segunda mirada sobre lo que hacemos en sesión.</p>
+        </li>
+        <li>
+          <h3>Formación constante</h3>
+          <p>Sigo formándome. Lo que aprendo acaba en la consulta.</p>
+        </li>
+        <li>
+          <h3>Bagaje académico y práctico</h3>
+          <p>Formación universitaria y práctica en equipos multidisciplinares, con niños, adolescentes y adultos.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div data-sx="proof"></div>
+  <div data-sx="places"></div>
+  <div data-sx="faq"></div>
+  <div data-sx="blog"></div>
+  <div data-sx="podcast"></div>
+
+  <section id="reserva" class="band" aria-labelledby="reserva-h">
+    <div class="wrap band__in">
+      <h2 id="reserva-h" class="h2">Pedir una primera sesión.</h2>
+      <p class="band__p">La primera sesión es para conocernos. Después decides tú si seguimos. Puede ser online o presencial.</p>
+      <div class="band__btns">
+        <button class="btn btn--light" type="button" data-book data-book-mode="online"><span class="sr">Primera sesión </span>Online</button>
+        <button class="btn btn--light" type="button" data-book data-book-mode="presencial"><span class="sr">Primera sesión </span>Presencial</button>
+      </div>
+      <p class="band__note">Si no sabes qué terapia te encaja, lo hablamos al empezar. Y si prefieres preguntar antes, <a href="#sx-contacto" data-sx-go="contacto">escríbeme</a>.</p>
+    </div>
+  </section>
+
+  <div data-sx="contact"></div>
+</main>
+
+<div data-sx="footer"></div>
+
+<script>window.CLAUDIA={whatsapp:'34600000000',calLink:''}</script>
+<script src="shared/services.js" defer></script>
+<script src="shared/sections.js" defer></script>
+<script src="shared/booking.js" defer></script>
+<script src="shared/switcher.js" defer></script>
+<script>
+/* El telar. Urdimbre (hilos verticales) ya montada; la trama (hilos horizontales) se teje sola, una pasada cada medio segundo,
+   hasta cubrir algo menos de la mitad. Después se para y no consume nada. Con reduced-motion se dibuja ya tejido. */
+(() => {
+  const host = document.querySelector('.loom');
+  const cv = host && host.querySelector('canvas');
+  if (!cv || !cv.getContext) return;
+  const ctx = cv.getContext('2d');
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const COL = { lino: '#B9C5D2', linoD: '#9AABBD', marino: '#23456E', teja: '#B04A31' };
+  const PATTERN = 'llllmmllltllllllmlllttlllllllmllll'; /* de abajo arriba: l lino, m marino, t teja */
+  const WARP_T = 2.2, WEFT_T = 6.2, PITCH = 8, ROW_MS = 520;
+  let W = 0, H = 0, dpr = 1, warps = [], target = 0, active = 0, p = 0, last = 0, raf = 0, base, bctx, done = false, visible = true;
+
+  const mulberry = (seed) => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const ease = (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+  const tint = (hex, k) => { const n = parseInt(hex.slice(1), 16); const f = (v) => Math.max(0, Math.min(255, Math.round(v * k))); return `rgb(${f(n >> 16)},${f(n >> 8 & 255)},${f(n & 255)})`; };
+  const rowY = (k) => H - PITCH / 2 - k * PITCH;
+  const warpX = (w, y) => w.x + Math.sin(y * w.fq + w.ph) * w.amp;
+  const weftCol = (k) => { const c = PATTERN[k % PATTERN.length]; const v = 0.95 + ((k * 7919) % 97) / 97 * 0.1; return tint(c === 'm' ? COL.marino : c === 't' ? COL.teja : COL.lino, v); };
+
+  function drawWarp(c, w) {
+    c.beginPath();
+    for (let y = -4; y <= H + 4; y += 6) { const x = warpX(w, y); y === -4 ? c.moveTo(x, y) : c.lineTo(x, y); }
+    c.lineCap = 'butt'; c.lineWidth = WARP_T; c.strokeStyle = w.col; c.stroke();
+  }
+  function drawWeft(c, k, prog) {
+    const y = rowY(k); if (y < -PITCH) return;
+    const len = (W + 8) * prog;
+    const x0 = k % 2 === 0 ? -4 : W + 4 - len, x1 = x0 + len;
+    c.lineCap = 'round'; c.lineWidth = WEFT_T;
+    c.strokeStyle = 'rgba(29,35,48,0.09)';
+    c.beginPath(); c.moveTo(x0, y + 1.3); c.lineTo(x1, y + 1.3); c.stroke();
+    c.strokeStyle = weftCol(k);
+    c.beginPath(); c.moveTo(x0, y); c.lineTo(x1, y); c.stroke();
+    c.lineCap = 'butt'; c.lineWidth = WARP_T;
+    for (let i = 0; i < warps.length; i++) {
+      if ((i + k) % 2) continue; /* en estos cruces la urdimbre pasa por encima */
+      const w = warps[i], x = warpX(w, y);
+      if (x < x0 || x > x1) continue;
+      c.strokeStyle = w.col; c.beginPath(); c.moveTo(x, y - WEFT_T / 2 - 1.5); c.lineTo(x, y + WEFT_T / 2 + 1.5); c.stroke();
+    }
+  }
+  function render() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.drawImage(base, 0, 0, W, H);
+    if (!done) drawWeft(ctx, active, ease(p));
+  }
+  function frame(t) {
+    raf = 0;
+    if (done || !visible || document.hidden) return;
+    const dt = Math.min(64, t - (last || t)); last = t;
+    p += dt / ROW_MS;
+    while (p >= 1) { drawWeft(bctx, active, 1); active++; p -= 1; if (active >= target) { done = true; break; } }
+    render();
+    if (!done) raf = requestAnimationFrame(frame);
+  }
+  function start() { if (raf || done || RM.matches) return; last = 0; raf = requestAnimationFrame(frame); }
+  function stop() { if (raf) cancelAnimationFrame(raf); raf = 0; }
+
+  function setup(keep) {
+    const r = host.getBoundingClientRect();
+    W = Math.max(1, Math.round(r.width)); H = Math.max(1, Math.round(r.height));
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    base = document.createElement('canvas'); base.width = cv.width; base.height = cv.height;
+    bctx = base.getContext('2d'); bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const gap = W < 520 ? 12 : 14, rnd = mulberry(11), n = Math.floor(W / gap) + 1;
+    warps = [];
+    for (let i = 0; i < n; i++) {
+      let col = COL.lino;
+      if (i % 9 === 4) col = COL.marino; else if (i % 13 === 8) col = COL.teja; else if (rnd() < 0.2) col = COL.linoD;
+      warps.push({ x: gap / 2 + i * gap + (rnd() - 0.5) * 1.6, col: tint(col, 0.95 + rnd() * 0.1), amp: 0.5 + rnd(), ph: rnd() * 6.283, fq: 0.01 + rnd() * 0.012 });
+    }
+    target = Math.max(6, Math.round(H * (W < 820 ? 0.5 : 0.48) / PITCH));
+    if (!keep) { active = Math.floor(target * 0.42); p = 0; }
+    if (RM.matches) active = target;
+    active = Math.min(active, target);
+    done = active >= target;
+    for (const w of warps) drawWarp(bctx, w);
+    for (let k = 0; k < active; k++) drawWeft(bctx, k, 1);
+    render();
+    stop(); start();
+  }
+
+  setup(false);
+  let rt;
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(() => {
+      const r = host.getBoundingClientRect();
+      if (Math.round(r.width) === W && Math.round(r.height) === H) return;
+      clearTimeout(rt); rt = setTimeout(() => setup(true), 120);
+    }).observe(host);
+  } else {
+    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => setup(true), 120); });
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((es) => { visible = es[0].isIntersecting; visible ? start() : stop(); }, { threshold: 0.05 }).observe(host);
+  }
+  document.addEventListener('visibilitychange', () => { document.hidden ? stop() : start(); });
+  if (RM.addEventListener) RM.addEventListener('change', () => setup(true));
+})();
+</script>
+</body>
+</html>
