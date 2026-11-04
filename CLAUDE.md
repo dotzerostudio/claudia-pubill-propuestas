@@ -9,6 +9,7 @@ Web de Claudia Pubill, psicóloga en Barcelona y por videollamada. Atiende a ni�
 - `directions/` tiene seis propuestas de diseño (A Respira, B Calidez, C Amanecer, D Ventana, E Sobremesa, F Alba) y `index.html`, que las compara.
 - **F · Alba** (`f-alba.html`) es la que se está desarrollando. Viene del feedback de Claudia: estilo de B, el amanecer de C en una sección completa bajo el hero, barra fija arriba, una reflexión distinta en cada visita e idiomas CA · ES · EN.
 - Cuando Claudia apruebe una dirección: sistema de diseño (tokens.css, componentes, guía corta), web real y publicación en Cloudflare Pages desde GitHub. Ella la editará con Antigravity.
+- GitHub (privados, cuenta dotzerostudio): `claudia-pubill-propuestas` es esta carpeta (las seis propuestas). `claudia-pubill-web` es la web F sola: se genera en `web-f/`, que tiene su propio git y este repositorio ignora. Si cambias F en `directions/`, cópialo también a `web-f/`: `f-alba.html` pasa a `index.html` sin la línea de `switcher.js`.
 - Historial y pendientes: `_notes/RESUME.md`. Briefing de F: `_notes/brief-F.md`. Fuentes de las reflexiones: `_notes/reflexiones-fuentes.md`.
 
 ## Técnica

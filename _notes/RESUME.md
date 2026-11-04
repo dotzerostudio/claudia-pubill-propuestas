@@ -27,3 +27,5 @@ DONE 2026-11-04 (artifact Version 7): F · Alba published (directions/f-alba.htm
 - Reflections: shared/reflections.js, 10 items (4 questions incl. Claudia's, 6 verified findings with DOI links). Sources and limits in _notes/reflexiones-fuentes.md. Claudia's "20% more wellbeing from gratitude" is NOT supported by any source; replaced by Emmons & McCullough 2003 (study 3).
 - Spanish fixes applied in the shared modules (affect A–F): "reservar" removed from the popup lead, "email" → "correo", two FAQ lines, the family therapy line.
 - Open: hard-coded placeholder hola@ejemplo.com in sections.js; open-dialog state of A–E not diffed before/after (closed dialog was byte-identical).
+
+DONE 2026-11-04 (artifact Version 8): F round 2-3 (C-style sunrise from night, band sun, Claudia portrait in hero, consulta photos, card never covers her face, scroll animations). GitHub private repos on account dotzerostudio: claudia-pubill-propuestas (this folder) and claudia-pubill-web (web-f/, F only; rebuild by copying f-alba.html to web-f/index.html without the switcher line plus the shared files it uses).
